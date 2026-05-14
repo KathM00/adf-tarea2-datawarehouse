@@ -1,0 +1,10 @@
+{
+	"name": "adf-ucb-dw-pai-kath012026",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
+	"location": "brazilsouth"
+}
