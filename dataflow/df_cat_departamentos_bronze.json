@@ -1,0 +1,97 @@
+{
+	"name": "df_cat_departamentos_bronze",
+	"properties": {
+		"folder": {
+			"name": "bronze"
+		},
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "catalogo_departamentos_csv",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "silver_cat_departamentos",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				},
+				{
+					"name": "derivedColumn2"
+				},
+				{
+					"name": "derivedColumn3"
+				},
+				{
+					"name": "derivedColumn4"
+				},
+				{
+					"name": "derivedColumn5"
+				},
+				{
+					"name": "derivedColumn6"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          municipio_id as string,",
+				"          municipio_nombre as string,",
+				"          departamento as string,",
+				"          codigo_departamento as string,",
+				"          zona_geografica as string,",
+				"          es_capital_departamental as string,",
+				"          poblacion_depto_estimada as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 derive(municipio_id = trim(municipio_id)) ~> derivedColumn1",
+				"derivedColumn1 derive(municipio_nombre = initCap(regexReplace(municipio_nombre, '\\\\s+', ' '))) ~> derivedColumn2",
+				"derivedColumn2 derive(departamento = initCap(regexReplace(departamento, '\\\\s+', ' '))) ~> derivedColumn3",
+				"derivedColumn3 derive(codigo_departamento = upper(trim(codigo_departamento))) ~> derivedColumn4",
+				"derivedColumn4 derive(es_capital_departamental = iif(in(['si', 'true', '1', 'yes'], lower(trim(toString(es_capital_departamental)))), true(), false())) ~> derivedColumn5",
+				"derivedColumn5 derive(poblacion_depto_estimada = toInteger(regexReplace(toString(poblacion_depto_estimada), '[^0-9]', ''))) ~> derivedColumn6",
+				"derivedColumn6 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          municipio_id as string,",
+				"          municipio_nombre as string,",
+				"          departamento as string,",
+				"          codigo_departamento as string,",
+				"          zona_geografica as string,",
+				"          es_capital_departamental as boolean,",
+				"          poblacion_depto_estimada as integer",
+				"     ),",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          municipio_id,",
+				"          municipio_nombre,",
+				"          departamento,",
+				"          codigo_departamento,",
+				"          zona_geografica,",
+				"          es_capital_departamental,",
+				"          poblacion_depto_estimada",
+				"     )) ~> sink1"
+			]
+		}
+	}
+}

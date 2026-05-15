@@ -1,0 +1,83 @@
+{
+	"name": "catalogo_vacunas_pai_csv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "datalake_pai",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "bronze"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "catalogo_vacunas_pai.csv",
+				"container": "bronze"
+			},
+			"columnDelimiter": ";",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "vacuna_id",
+				"type": "String"
+			},
+			{
+				"name": "vacuna_nombre",
+				"type": "String"
+			},
+			{
+				"name": "enfermedad_previene",
+				"type": "String"
+			},
+			{
+				"name": "grupo_pai",
+				"type": "String"
+			},
+			{
+				"name": "numero_dosis",
+				"type": "String"
+			},
+			{
+				"name": "dosis_descripcion",
+				"type": "String"
+			},
+			{
+				"name": "edad_aplicacion_descripcion",
+				"type": "String"
+			},
+			{
+				"name": "edad_minima_dias",
+				"type": "String"
+			},
+			{
+				"name": "edad_maxima_dias",
+				"type": "String"
+			},
+			{
+				"name": "intervalo_minimo_dias",
+				"type": "String"
+			},
+			{
+				"name": "via_administracion",
+				"type": "String"
+			},
+			{
+				"name": "sitio_aplicacion",
+				"type": "String"
+			},
+			{
+				"name": "dosis_ml",
+				"type": "String"
+			},
+			{
+				"name": "condicion_especial",
+				"type": "String"
+			}
+		]
+	}
+}

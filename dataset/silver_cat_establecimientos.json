@@ -1,0 +1,73 @@
+{
+	"name": "silver_cat_establecimientos",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "dw_pai",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "silver"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "establecimiento_id",
+				"type": "varchar"
+			},
+			{
+				"name": "nombre_establecimiento",
+				"type": "varchar"
+			},
+			{
+				"name": "tipo_establecimiento",
+				"type": "varchar"
+			},
+			{
+				"name": "nivel_atencion",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "zona",
+				"type": "varchar"
+			},
+			{
+				"name": "sedes",
+				"type": "varchar"
+			},
+			{
+				"name": "red_salud",
+				"type": "varchar"
+			},
+			{
+				"name": "departamento",
+				"type": "varchar"
+			},
+			{
+				"name": "municipio",
+				"type": "varchar"
+			},
+			{
+				"name": "latitud",
+				"type": "varchar"
+			},
+			{
+				"name": "longitud",
+				"type": "varchar"
+			},
+			{
+				"name": "tiene_cadena_frio",
+				"type": "bit"
+			},
+			{
+				"name": "activo",
+				"type": "bit"
+			}
+		],
+		"typeProperties": {
+			"schema": "silver",
+			"table": "cat_establecimientos"
+		}
+	}
+}

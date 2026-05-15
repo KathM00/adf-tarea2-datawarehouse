@@ -1,0 +1,115 @@
+{
+	"name": "vacunacion_santa_cruz_csv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "datalake_pai",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "bronze"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "vacunacion_santa_cruz.csv",
+				"container": "bronze"
+			},
+			"columnDelimiter": ";",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "registro_id",
+				"type": "String"
+			},
+			{
+				"name": "paciente_id",
+				"type": "String"
+			},
+			{
+				"name": "ci_paciente",
+				"type": "String"
+			},
+			{
+				"name": "nombre_paciente",
+				"type": "String"
+			},
+			{
+				"name": "apellido_paterno",
+				"type": "String"
+			},
+			{
+				"name": "apellido_materno",
+				"type": "String"
+			},
+			{
+				"name": "sexo",
+				"type": "String"
+			},
+			{
+				"name": "fecha_nacimiento",
+				"type": "String"
+			},
+			{
+				"name": "municipio_residencia",
+				"type": "String"
+			},
+			{
+				"name": "comunidad_indigena",
+				"type": "String"
+			},
+			{
+				"name": "fecha_vacunacion",
+				"type": "String"
+			},
+			{
+				"name": "vacuna_id",
+				"type": "String"
+			},
+			{
+				"name": "vacuna_nombre",
+				"type": "String"
+			},
+			{
+				"name": "numero_dosis",
+				"type": "String"
+			},
+			{
+				"name": "establecimiento_id",
+				"type": "String"
+			},
+			{
+				"name": "nombre_establecimiento",
+				"type": "String"
+			},
+			{
+				"name": "departamento",
+				"type": "String"
+			},
+			{
+				"name": "lote_vacuna",
+				"type": "String"
+			},
+			{
+				"name": "temperatura_conservacion",
+				"type": "String"
+			},
+			{
+				"name": "edad_dias_aplicacion",
+				"type": "String"
+			},
+			{
+				"name": "aplicacion_oportuna",
+				"type": "String"
+			},
+			{
+				"name": "via_administracion",
+				"type": "String"
+			}
+		]
+	}
+}

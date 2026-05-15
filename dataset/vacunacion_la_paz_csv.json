@@ -1,0 +1,111 @@
+{
+	"name": "vacunacion_la_paz_csv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "datalake_pai",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "bronze"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "vacunacion_la_paz.csv",
+				"container": "bronze"
+			},
+			"columnDelimiter": ";",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "id_registro",
+				"type": "String"
+			},
+			{
+				"name": "cod_paciente",
+				"type": "String"
+			},
+			{
+				"name": "documento_identidad",
+				"type": "String"
+			},
+			{
+				"name": "nombres",
+				"type": "String"
+			},
+			{
+				"name": "primer_apellido",
+				"type": "String"
+			},
+			{
+				"name": "segundo_apellido",
+				"type": "String"
+			},
+			{
+				"name": "genero",
+				"type": "String"
+			},
+			{
+				"name": "fec_nacimiento",
+				"type": "String"
+			},
+			{
+				"name": "municipio",
+				"type": "String"
+			},
+			{
+				"name": "pueblo_indigena",
+				"type": "String"
+			},
+			{
+				"name": "fec_vacunacion",
+				"type": "String"
+			},
+			{
+				"name": "cod_vacuna",
+				"type": "String"
+			},
+			{
+				"name": "desc_vacuna",
+				"type": "String"
+			},
+			{
+				"name": "nro_dosis",
+				"type": "String"
+			},
+			{
+				"name": "cod_establecimiento",
+				"type": "String"
+			},
+			{
+				"name": "desc_establecimiento",
+				"type": "String"
+			},
+			{
+				"name": "depto",
+				"type": "String"
+			},
+			{
+				"name": "nro_lote",
+				"type": "String"
+			},
+			{
+				"name": "temp_conservacion",
+				"type": "String"
+			},
+			{
+				"name": "edad_dias",
+				"type": "String"
+			},
+			{
+				"name": "via_aplicacion",
+				"type": "String"
+			}
+		]
+	}
+}

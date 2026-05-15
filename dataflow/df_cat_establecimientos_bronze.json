@@ -1,0 +1,121 @@
+{
+	"name": "df_cat_establecimientos_bronze",
+	"properties": {
+		"folder": {
+			"name": "bronze"
+		},
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "catalogo_establecimientos_csv",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "silver_cat_establecimientos",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				},
+				{
+					"name": "derivedColumn2"
+				},
+				{
+					"name": "derivedColumn3"
+				},
+				{
+					"name": "derivedColumn5"
+				},
+				{
+					"name": "derivedColumn6"
+				},
+				{
+					"name": "derivedColumn8"
+				},
+				{
+					"name": "derivedColumn9"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          establecimiento_id as string,",
+				"          nombre_establecimiento as string,",
+				"          tipo_establecimiento as string,",
+				"          nivel_atencion as string,",
+				"          zona as string,",
+				"          sedes as string,",
+				"          red_salud as string,",
+				"          departamento as string,",
+				"          municipio as string,",
+				"          latitud as string,",
+				"          longitud as string,",
+				"          tiene_cadena_frio as string,",
+				"          activo as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 derive(establecimiento_id = trim(establecimiento_id)) ~> derivedColumn1",
+				"derivedColumn1 derive(nombre_establecimiento = initCap(trim(regexReplace(regexReplace(nombre_establecimiento, '[()]', ''), '\\\\s+', ' '))),",
+				"          municipio = initCap(regexReplace(municipio, '\\\\s+', ' '))) ~> derivedColumn2",
+				"derivedColumn2 derive(tipo_establecimiento = replace(replace(initCap(trim(tipo_establecimiento)), '3Er', '3er'), '2Do', '2do')) ~> derivedColumn3",
+				"derivedColumn3 derive(sedes = replace(initCap(trim(sedes)), 'Sedes', 'Sede')) ~> derivedColumn5",
+				"derivedColumn5 derive(red_salud = trim(regexReplace(initCap(regexReplace(red_salud, '\\\\s+', ' ')), '^Red De Salud\\\\s*', ''))) ~> derivedColumn6",
+				"derivedColumn6 derive(tiene_cadena_frio = iif(in(['si', 'true', '1', 'yes'], lower(trim(toString(tiene_cadena_frio)))), true(), false()),",
+				"          activo = iif(in(['si', 'true', '1', 'yes'], lower(trim(toString(activo)))), true(), false())) ~> derivedColumn8",
+				"derivedColumn8 derive(nivel_atencion = toInteger(nivel_atencion)) ~> derivedColumn9",
+				"derivedColumn9 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          establecimiento_id as string,",
+				"          nombre_establecimiento as string,",
+				"          tipo_establecimiento as string,",
+				"          nivel_atencion as integer,",
+				"          zona as string,",
+				"          sedes as string,",
+				"          red_salud as string,",
+				"          departamento as string,",
+				"          municipio as string,",
+				"          latitud as string,",
+				"          longitud as string,",
+				"          tiene_cadena_frio as boolean,",
+				"          activo as boolean",
+				"     ),",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          establecimiento_id,",
+				"          nombre_establecimiento,",
+				"          tipo_establecimiento,",
+				"          nivel_atencion,",
+				"          zona,",
+				"          sedes,",
+				"          red_salud,",
+				"          departamento,",
+				"          municipio,",
+				"          latitud,",
+				"          longitud,",
+				"          tiene_cadena_frio,",
+				"          activo",
+				"     )) ~> sink1"
+			]
+		}
+	}
+}

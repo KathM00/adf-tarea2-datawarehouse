@@ -1,0 +1,82 @@
+{
+	"name": "silver_cat_vacunas",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "dw_pai",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "silver"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "vacuna_id",
+				"type": "varchar"
+			},
+			{
+				"name": "vacuna_nombre",
+				"type": "varchar"
+			},
+			{
+				"name": "enfermedad_previene",
+				"type": "varchar"
+			},
+			{
+				"name": "grupo_pai",
+				"type": "varchar"
+			},
+			{
+				"name": "numero_dosis",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "dosis_descripcion",
+				"type": "varchar"
+			},
+			{
+				"name": "edad_aplicacion_descripcion",
+				"type": "varchar"
+			},
+			{
+				"name": "edad_minima_dias",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "edad_maxima_dias",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "intervalo_minimo_dias",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "via_administracion",
+				"type": "varchar"
+			},
+			{
+				"name": "sitio_aplicacion",
+				"type": "varchar"
+			},
+			{
+				"name": "dosis_ml",
+				"type": "decimal",
+				"precision": 5,
+				"scale": 2
+			},
+			{
+				"name": "condicion_especial",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "silver",
+			"table": "cat_vacunas"
+		}
+	}
+}

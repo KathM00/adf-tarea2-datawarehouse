@@ -1,0 +1,79 @@
+{
+	"name": "catalogo_establecimientos_csv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "datalake_pai",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "bronze"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "catalogo_establecimientos.csv",
+				"container": "bronze"
+			},
+			"columnDelimiter": ";",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "establecimiento_id",
+				"type": "String"
+			},
+			{
+				"name": "nombre_establecimiento",
+				"type": "String"
+			},
+			{
+				"name": "tipo_establecimiento",
+				"type": "String"
+			},
+			{
+				"name": "nivel_atencion",
+				"type": "String"
+			},
+			{
+				"name": "zona",
+				"type": "String"
+			},
+			{
+				"name": "sedes",
+				"type": "String"
+			},
+			{
+				"name": "red_salud",
+				"type": "String"
+			},
+			{
+				"name": "departamento",
+				"type": "String"
+			},
+			{
+				"name": "municipio",
+				"type": "String"
+			},
+			{
+				"name": "latitud",
+				"type": "String"
+			},
+			{
+				"name": "longitud",
+				"type": "String"
+			},
+			{
+				"name": "tiene_cadena_frio",
+				"type": "String"
+			},
+			{
+				"name": "activo",
+				"type": "String"
+			}
+		]
+	}
+}

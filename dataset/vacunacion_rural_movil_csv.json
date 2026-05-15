@@ -1,0 +1,139 @@
+{
+	"name": "vacunacion_rural_movil_csv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "datalake_pai",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "bronze"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "vacunacion_rural_movil.csv",
+				"container": "bronze"
+			},
+			"columnDelimiter": ";",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "record_id",
+				"type": "String"
+			},
+			{
+				"name": "sync_timestamp",
+				"type": "String"
+			},
+			{
+				"name": "device_id",
+				"type": "String"
+			},
+			{
+				"name": "patient_id",
+				"type": "String"
+			},
+			{
+				"name": "patient_ci",
+				"type": "String"
+			},
+			{
+				"name": "patient_name",
+				"type": "String"
+			},
+			{
+				"name": "patient_last_name_1",
+				"type": "String"
+			},
+			{
+				"name": "patient_last_name_2",
+				"type": "String"
+			},
+			{
+				"name": "patient_sex",
+				"type": "String"
+			},
+			{
+				"name": "patient_birth_date",
+				"type": "String"
+			},
+			{
+				"name": "patient_department",
+				"type": "String"
+			},
+			{
+				"name": "patient_municipality",
+				"type": "String"
+			},
+			{
+				"name": "patient_community",
+				"type": "String"
+			},
+			{
+				"name": "patient_indigenous",
+				"type": "String"
+			},
+			{
+				"name": "vaccination_date",
+				"type": "String"
+			},
+			{
+				"name": "vaccine_code",
+				"type": "String"
+			},
+			{
+				"name": "vaccine_name",
+				"type": "String"
+			},
+			{
+				"name": "dose_number",
+				"type": "String"
+			},
+			{
+				"name": "facility_code",
+				"type": "String"
+			},
+			{
+				"name": "facility_name",
+				"type": "String"
+			},
+			{
+				"name": "lot_number",
+				"type": "String"
+			},
+			{
+				"name": "storage_temp_celsius",
+				"type": "String"
+			},
+			{
+				"name": "patient_age_days",
+				"type": "String"
+			},
+			{
+				"name": "administration_route",
+				"type": "String"
+			},
+			{
+				"name": "gps_latitude",
+				"type": "String"
+			},
+			{
+				"name": "gps_longitude",
+				"type": "String"
+			},
+			{
+				"name": "gps_accuracy_meters",
+				"type": "String"
+			},
+			{
+				"name": "observations",
+				"type": "String"
+			}
+		]
+	}
+}
