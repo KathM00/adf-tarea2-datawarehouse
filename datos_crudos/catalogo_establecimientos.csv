@@ -1,0 +1,356 @@
+﻿establecimiento_id;nombre_establecimiento;tipo_establecimiento;nivel_atencion;zona;sedes;red_salud;departamento;municipio;latitud;longitud;tiene_cadena_frio;activo
+EST-LP-0001;Micro Hospital Villa Adela;Centro de Salud;1;Urbana;SEDES La Paz;Red de Salud La Paz Urbana Norte;La Paz;La Paz;-16.052.494;-6.799.504;True;True
+EST-LP-0002;Micro Hospital Villa Fátima;Centro de Salud;1;Periurbana;SEDES La Paz;Red de Salud La Paz Urbana Sur;La Paz;El Alto;-16.167.084;-68.917.065;False;True
+EST-LP-0003;Centro Materno Infantil San Antonio;Centro de Salud;1;Urbana;SEDES La Paz;Red de Salud El Alto Norte;La Paz;Viacha;-16.813.212;-6.811.039;True;True
+EST-LP-0004;Posta Sanitaria Villa Victoria;Posta de Salud;1;Rural;SEDES La Paz;Red de Salud El Alto Sur;La Paz;Achacachi;-15.741.991;-68.577.566;True;True
+EST-LP-0005;Centro Materno Infantil Miraflores;Centro de Salud;1;Urbana;SEDES La Paz;Red de Salud Los Andes (Pucarani);La Paz;Copacabana;-17.225.679;-67.977.928;True;True
+EST-LP-0006;Posta Sanitaria Sopocachi;Posta de Salud;1;Periurbana;SEDES La Paz;Red de Salud Nor Yungas (Coroico);La Paz;Caranavi;-16.812.618;-68.793.725;True;True
+EST-LP-0007;Hospital Germán Busch Obrajes;Hospital de 2do Nivel;2;Urbana;SEDES La Paz;Red de Salud Caranavi;La Paz;Coroico;-17.244.978;-67.495.087;True;True
+EST-LP-0008;Centro Ambulatorio Calacoto;Centro de Salud;1;Urbana;SEDES La Paz;Red de Salud Ingavi (Viacha);La Paz;Patacamaya;-16.391.679;-68.899.899;True;True
+EST-LP-0009;Centro Materno Infantil Chasquipampa;Centro de Salud;1;Urbana;SEDES La Paz;Red de Salud La Paz Urbana Norte;La Paz;Pucarani;-15.825.001;-68.808.412;True;True
+EST-LP-0010;Micro Hospital Irpavi;Centro de Salud;1;Urbana;SEDES La Paz;Red de Salud La Paz Urbana Sur;La Paz;Sorata;-1.597.402;-68.379.195;True;True
+EST-LP-0011;Hospital Municipal Achumani;Hospital de 2do Nivel;2;Urbana;SEDES La Paz;Red de Salud El Alto Norte;La Paz;Mecapaca;-17.274.982;-68.272.558;True;True
+EST-LP-0012;Hospital de la Mujer Cota Cota;Hospital de 3er Nivel;3;Urbana;SEDES La Paz;Red de Salud El Alto Sur;La Paz;Palca;-16.169.028;-67.783.589;True;True
+EST-LP-0013;Centro de Salud Mallasa;Centro de Salud;1;Periurbana;SEDES La Paz;Red de Salud Los Andes (Pucarani);La Paz;Sapahaqui;-15.939.938;-68.230.879;True;True
+EST-LP-0014;Posta de Salud Kupini;Posta de Salud;1;Rural;SEDES La Paz;Red de Salud Nor Yungas (Coroico);La Paz;Guanay;-16.279.908;-6.753.046;True;True
+EST-LP-0015;Posta de Salud Santiago de Lacaya;Posta de Salud;1;Rural;SEDES La Paz;Red de Salud Caranavi;La Paz;Tipuani;-16.922.424;-68.540.291;True;True
+EST-LP-0016;Hospital Integral Senkata;Hospital de 2do Nivel;2;Urbana;SEDES La Paz;Red de Salud Ingavi (Viacha);La Paz;La Paz;-17.249.713;-67.931.743;True;True
+EST-LP-0017;Puesto de Salud Río Seco;Posta de Salud;1;Rural;SEDES La Paz;Red de Salud La Paz Urbana Norte;La Paz;El Alto;-16.436.254;-68.625.102;False;True
+EST-LP-0018;Posta Sanitaria Ciudad Satélite;Posta de Salud;1;Rural;SEDES La Paz;Red de Salud La Paz Urbana Sur;La Paz;Viacha;-16.826.986;-68.781.209;True;True
+EST-LP-0019;Centro Ambulatorio Villa Dolores;Centro de Salud;1;Urbana;SEDES La Paz;Red de Salud El Alto Norte;La Paz;Achacachi;-16.008.096;-67.516.254;True;True
+EST-LP-0020;Centro Ambulatorio Plan 3000;Centro de Salud;1;Urbana;SEDES La Paz;Red de Salud El Alto Sur;La Paz;Copacabana;-1.673.589;-6.846.235;True;True
+EST-LP-0021;Centro de Salud Pampa de la Isla;Centro de Salud;1;Urbana;SEDES La Paz;Red de Salud Los Andes (Pucarani);La Paz;Caranavi;-16.759.816;-67.441.344;True;True
+EST-LP-0022;Posta de Salud Los Lotes;Posta de Salud;1;Rural;SEDES La Paz;Red de Salud Nor Yungas (Coroico);La Paz;Coroico;-16.893.735;-68.554.998;False;True
+EST-LP-0023;Hospital Germán Busch La Ramada;Hospital de 2do Nivel;2;Urbana;SEDES La Paz;Red de Salud Caranavi;La Paz;Patacamaya;-17.240.981;-67.974.697;True;True
+EST-LP-0024;Centro de Salud Equipetrol;Centro de Salud;1;Periurbana;SEDES La Paz;Red de Salud Ingavi (Viacha);La Paz;Pucarani;-16.210.871;-68.100.505;True;True
+EST-LP-0025;Policlínico Urbarí;Centro de Salud;1;Urbana;SEDES La Paz;Red de Salud La Paz Urbana Norte;La Paz;Sorata;-16.912.544;-67.664.976;True;False
+EST-LP-0026;Centro de Salud Las Palmas;Centro de Salud;1;Urbana;SEDES La Paz;Red de Salud La Paz Urbana Sur;La Paz;Mecapaca;-16.486.882;-678.367;False;True
+EST-LP-0027;Centro Integral de Salud Hamacas;Centro de Salud;1;Urbana;SEDES La Paz;Red de Salud El Alto Norte;La Paz;Palca;-16.937.607;-67.917.724;True;True
+EST-LP-0028;Centro Integral de Salud Colquiri;Centro de Salud;1;Periurbana;SEDES La Paz;Red de Salud El Alto Sur;La Paz;Sapahaqui;-16.218.896;-67.773.654;True;True
+EST-LP-0029;Puesto de Salud Tiquipaya Norte;Posta de Salud;1;Rural;SEDES La Paz;Red de Salud Los Andes (Pucarani);La Paz;Guanay;-15.992.444;-68.061.679;True;True
+EST-LP-0030;Hospital Bracamonte Sacaba Sur;Hospital de 2do Nivel;2;Urbana;SEDES La Paz;Red de Salud Nor Yungas (Coroico);La Paz;Tipuani;-15.859.331;-67.937.038;True;True
+EST-LP-0031;Puesto de Salud Quillacollo Centro;Posta de Salud;1;Periurbana;SEDES La Paz;Red de Salud Caranavi;La Paz;La Paz;-16.652.787;-67.529.568;False;True
+EST-LP-0032;Posta Sanitaria Temporal;Posta de Salud;1;Rural;SEDES La Paz;Red de Salud Ingavi (Viacha);La Paz;El Alto;-17.137.646;-67.888.397;True;True
+EST-LP-0033;Centro Ambulatorio Alalay;Centro de Salud;1;Urbana;SEDES La Paz;Red de Salud La Paz Urbana Norte;La Paz;Viacha;-15.708.868;-6.866.852;True;True
+EST-LP-0034;Policlínico Jaihuayco;Centro de Salud;1;Periurbana;SEDES La Paz;Red de Salud La Paz Urbana Sur;La Paz;Achacachi;-16.390.706;-6.880.012;True;True
+EST-LP-0035;Centro Ambulatorio Valle Hermoso;Centro de Salud;1;Periurbana;SEDES La Paz;Red de Salud El Alto Norte;La Paz;Copacabana;-16.521.213;-67.500.242;True;True
+EST-LP-0036;Puesto de Salud Cerro Verde;Posta de Salud;1;Rural;SEDES La Paz;Red de Salud El Alto Sur;La Paz;Caranavi;-16.987.611;-67.794.077;True;True
+EST-LP-0037;Posta de Salud Villa Pagador;Posta de Salud;1;Periurbana;SEDES La Paz;Red de Salud Los Andes (Pucarani);La Paz;Coroico;-16.548.089;-68.502.703;False;True
+EST-LP-0038;Posta de Salud San Sebastián;Posta de Salud;1;Rural;SEDES La Paz;Red de Salud Nor Yungas (Coroico);La Paz;Patacamaya;-15.753.352;-67.408.208;False;True
+EST-LP-0039;Centro de Salud La Cancha;Centro de Salud;1;Urbana;SEDES La Paz;Red de Salud Caranavi;La Paz;Pucarani;-17.028.812;-68.059.118;False;True
+EST-LP-0040;Centro Integral de Salud Chimba;Centro de Salud;1;Periurbana;SEDES La Paz;Red de Salud Ingavi (Viacha);La Paz;Sorata;-15.715.914;-68.725.866;True;True
+EST-LP-0041;Posta de Salud San Pedro;Posta de Salud;1;Rural;SEDES La Paz;Red de Salud La Paz Urbana Norte;La Paz;Mecapaca;-16.165.742;-68.065.488;True;True
+EST-LP-0042;Micro Hospital Alto Lima;Centro de Salud;1;Urbana;SEDES La Paz;Red de Salud La Paz Urbana Sur;La Paz;Palca;-17.291.704;-67.945.369;True;True
+EST-LP-0043;Centro Ambulatorio Villa Ingenio;Centro de Salud;1;Periurbana;SEDES La Paz;Red de Salud El Alto Norte;La Paz;Sapahaqui;-16.759.208;-68.349.067;True;True
+EST-LP-0044;Hospital Japonés Nuevos Horizontes;Hospital de 3er Nivel;3;Urbana;SEDES La Paz;Red de Salud El Alto Sur;La Paz;Guanay;-17.051.933;-67.379.055;True;True
+EST-LP-0045;Centro Integral de Salud Franz Tamayo;Centro de Salud;1;Periurbana;SEDES La Paz;Red de Salud Los Andes (Pucarani);La Paz;Tipuani;-16.723.695;-68.746.703;True;True
+EST-LP-0046;Micro Hospital Mariscal Sucre;Centro de Salud;1;Urbana;SEDES La Paz;Red de Salud Nor Yungas (Coroico);La Paz;La Paz;-15.952.763;-68.638.992;True;True
+EST-LP-0047;Hospital de Distrito Bolívar;Hospital de 2do Nivel;2;Urbana;SEDES La Paz;Red de Salud Caranavi;La Paz;El Alto;-16.473.919;-6.843.327;True;True
+EST-LP-0048;Centro Integral de Salud Litoral;Centro de Salud;1;Urbana;SEDES La Paz;Red de Salud Ingavi (Viacha);La Paz;Viacha;-15.759.763;-67.612.432;True;True
+EST-LP-0049;Centro de Salud Tupac Katari;Centro de Salud;1;Urbana;SEDES La Paz;Red de Salud La Paz Urbana Norte;La Paz;Achacachi;-1.691.634;-68.799.803;True;True
+EST-LP-0050;Posta de Salud Bartolina Sisa;Posta de Salud;1;Rural;SEDES La Paz;Red de Salud La Paz Urbana Sur;La Paz;Copacabana;-16.413.034;-67.971.247;True;True
+EST-LP-0051;Micro Hospital Illimani;Centro de Salud;1;Urbana;SEDES La Paz;Red de Salud El Alto Norte;La Paz;Caranavi;-16.752.993;-68.803.121;True;True
+EST-LP-0052;Posta de Salud Chacaltaya;Posta de Salud;1;Rural;SEDES La Paz;Red de Salud El Alto Sur;La Paz;Coroico;-17.143.465;-68.163.415;True;True
+EST-LP-0053;Centro Integral de Salud Huayna Potosí;Centro de Salud;1;Periurbana;SEDES La Paz;Red de Salud Los Andes (Pucarani);La Paz;Patacamaya;-1.628.385;-68.877.514;True;True
+EST-LP-0054;Centro de Salud Sajama;Centro de Salud;1;Urbana;SEDES La Paz;Red de Salud Nor Yungas (Coroico);La Paz;Pucarani;-16.205.658;-67.964.638;False;True
+EST-LP-0055;Puesto de Salud Tunari;Posta de Salud;1;Periurbana;SEDES La Paz;Red de Salud Caranavi;La Paz;Sorata;-16.216.531;-68.032.613;True;True
+EST-LP-0056;Puesto de Salud Toro Toro;Posta de Salud;1;Periurbana;SEDES La Paz;Red de Salud Ingavi (Viacha);La Paz;Mecapaca;-16.257.624;-68.619.305;True;True
+EST-LP-0057;Micro Hospital Tarapacá;Centro de Salud;1;Urbana;SEDES La Paz;Red de Salud La Paz Urbana Norte;La Paz;Palca;-16.207.189;-68.836.098;True;True
+EST-LP-0058;Hospital del Niño El Carmen;Hospital de 3er Nivel;3;Urbana;SEDES La Paz;Red de Salud La Paz Urbana Sur;La Paz;Sapahaqui;-16.882.889;-6.815.634;True;True
+EST-LP-0059;Posta de Salud Villa Primavera;Posta de Salud;1;Periurbana;SEDES La Paz;Red de Salud El Alto Norte;La Paz;Guanay;-16.848.745;-68.666.097;True;True
+EST-LP-0060;Posta Sanitaria Nueva Esperanza;Posta de Salud;1;Rural;SEDES La Paz;Red de Salud El Alto Sur;La Paz;Tipuani;-1.637.113;-67.562.613;True;True
+EST-LP-0061;Puesto de Salud Progreso;Posta de Salud;1;Periurbana;SEDES La Paz;Red de Salud Los Andes (Pucarani);La Paz;La Paz;-17.135.002;-67.505.915;True;True
+EST-LP-0062;Policlínico Unión;Centro de Salud;1;Urbana;SEDES La Paz;Red de Salud Nor Yungas (Coroico);La Paz;El Alto;-17.214.424;-67.416.334;True;True
+EST-LP-0063;Puesto de Salud Libertad;Posta de Salud;1;Periurbana;SEDES La Paz;Red de Salud Caranavi;La Paz;Viacha;-16.382.499;-6.793.906;True;True
+EST-LP-0064;Policlínico Porvenir;Centro de Salud;1;Urbana;SEDES La Paz;Red de Salud Ingavi (Viacha);La Paz;Achacachi;-15.786.089;-67.699.926;True;True
+EST-LP-0065;Posta Sanitaria Villa Adela;Posta de Salud;1;Rural;SEDES La Paz;Red de Salud La Paz Urbana Norte;La Paz;Copacabana;-16.593.551;-67.529.673;True;True
+EST-LP-0066;Hospital Municipal Villa Fátima;Hospital de 2do Nivel;2;Urbana;SEDES La Paz;Red de Salud La Paz Urbana Sur;La Paz;Caranavi;-17.138.204;-68.815.429;True;True
+EST-LP-0067;Posta Sanitaria San Antonio;Posta de Salud;1;Rural;SEDES La Paz;Red de Salud El Alto Norte;La Paz;Coroico;-16.478.678;-68.576.835;True;True
+EST-LP-0068;Posta de Salud Villa Victoria;Posta de Salud;1;Periurbana;SEDES La Paz;Red de Salud El Alto Sur;La Paz;Patacamaya;-15.722.398;-67.744.595;True;True
+EST-LP-0069;Posta Sanitaria Miraflores;Posta de Salud;1;Rural;SEDES La Paz;Red de Salud Los Andes (Pucarani);La Paz;Pucarani;-16.902.041;-68.421.596;True;True
+EST-LP-0070;Centro Ambulatorio Sopocachi;Centro de Salud;1;Urbana;SEDES La Paz;Red de Salud Nor Yungas (Coroico);La Paz;Sorata;-17.109.891;-68.761.958;True;True
+EST-SC-0071;Centro Ambulatorio Obrajes;Centro de Salud;1;Urbana;SEDES Santa Cruz;Red de Salud SC Norte (Plan 3000);Santa Cruz;Santa Cruz de la Sierra;-17.846.855;-64.431.326;True;True
+EST-SC-0072;Posta de Salud Calacoto;Posta de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud SC Sur (Urbana);Santa Cruz;Montero;-1.915.052;-62.006.571;True;False
+EST-SC-0073;Hospital Integral Chasquipampa;Hospital de 2do Nivel;2;Urbana;SEDES Santa Cruz;Red de Salud SC Este;Santa Cruz;Warnes;-17.193.767;-64.453.696;True;True
+EST-SC-0074;Centro de Salud Irpavi;Centro de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud Montero;Santa Cruz;Cotoca;-17.527.057;-61.976.526;True;True
+EST-SC-0075;Posta Sanitaria Achumani;Posta de Salud;1;Rural;SEDES Santa Cruz;Red de Salud Warnes-Cotoca;Santa Cruz;La Guardia;-17.419.602;-63.847.856;True;True
+EST-SC-0076;Centro Integral de Salud Cota Cota;Centro de Salud;1;Urbana;SEDES Santa Cruz;Red de Salud Chiquitanía;Santa Cruz;Camiri;-18.198.965;-6.390.015;True;True
+EST-SC-0077;Micro Hospital Mallasa;Centro de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud Guarayos;Santa Cruz;Puerto Suarez;-17.225.806;-64.192.149;False;True
+EST-SC-0078;Posta de Salud Kupini;Posta de Salud;1;Rural;SEDES Santa Cruz;Red de Salud Cordillera (Camiri);Santa Cruz;San Ignacio de Velasco;-18.025.271;-61.881.815;False;True
+EST-SC-0079;Hospital de Clínicas Santiago de Lacaya;Hospital de 3er Nivel;3;Urbana;SEDES Santa Cruz;Red de Salud SC Norte (Plan 3000);Santa Cruz;Portachuelo;-16.947.193;-6.323.889;False;True
+EST-SC-0080;Posta de Salud Senkata;Posta de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud SC Sur (Urbana);Santa Cruz;Yapacaní;-16.753.643;-62.165.014;True;True
+EST-SC-0081;Centro Ambulatorio Río Seco;Centro de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud SC Este;Santa Cruz;Mineros;-17.676.961;-62.430.268;False;True
+EST-SC-0082;Posta Sanitaria Ciudad Satélite;Posta de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud Montero;Santa Cruz;San Julián;-18.537.956;-63.328.368;True;False
+EST-SC-0083;Posta Sanitaria Villa Dolores;Posta de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud Warnes-Cotoca;Santa Cruz;Concepción;-17.009.003;-64.539.311;True;True
+EST-SC-0084;Centro Ambulatorio Plan 3000;Centro de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud Chiquitanía;Santa Cruz;Roboré;-17.719.509;-62.123.455;True;True
+EST-SC-0085;Posta de Salud Pampa de la Isla;Posta de Salud;1;Rural;SEDES Santa Cruz;Red de Salud Guarayos;Santa Cruz;Vallegrande;-17.839.862;-63.418.393;False;True
+EST-SC-0086;Puesto de Salud Los Lotes;Posta de Salud;1;Rural;SEDES Santa Cruz;Red de Salud Cordillera (Camiri);Santa Cruz;Santa Cruz de la Sierra;-19.236.366;-63.628.237;True;True
+EST-SC-0087;Centro Integral de Salud La Ramada;Centro de Salud;1;Urbana;SEDES Santa Cruz;Red de Salud SC Norte (Plan 3000);Santa Cruz;Montero;-17.738.032;-62.329.041;True;True
+EST-SC-0088;Posta de Salud Equipetrol;Posta de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud SC Sur (Urbana);Santa Cruz;Warnes;-1.790.196;-62.153.726;True;True
+EST-SC-0089;Hospital Obrero Urbarí;Hospital de 3er Nivel;3;Urbana;SEDES Santa Cruz;Red de Salud SC Este;Santa Cruz;Cotoca;-17.802.146;-63.693.745;True;True
+EST-SC-0090;Hospital Virgen de Remedios Las Palmas;Hospital de 2do Nivel;2;Urbana;SEDES Santa Cruz;Red de Salud Montero;Santa Cruz;La Guardia;-17.899.643;-62.925.702;True;True
+EST-SC-0091;Centro Materno Infantil Hamacas;Centro de Salud;1;Urbana;SEDES Santa Cruz;Red de Salud Warnes-Cotoca;Santa Cruz;Camiri;-16.589.635;-63.258.115;True;True
+EST-SC-0092;Policlínico Colquiri;Centro de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud Chiquitanía;Santa Cruz;Puerto Suarez;-18.244.752;-63.637.142;True;True
+EST-SC-0093;Centro Materno Infantil Tiquipaya Norte;Centro de Salud;1;Urbana;SEDES Santa Cruz;Red de Salud Guarayos;Santa Cruz;San Ignacio de Velasco;-1.818.719;-63.169.748;True;True
+EST-SC-0094;Posta de Salud Sacaba Sur;Posta de Salud;1;Rural;SEDES Santa Cruz;Red de Salud Cordillera (Camiri);Santa Cruz;Portachuelo;-17.745.029;-64.209.067;True;True
+EST-SC-0095;Posta de Salud Quillacollo Centro;Posta de Salud;1;Rural;SEDES Santa Cruz;Red de Salud SC Norte (Plan 3000);Santa Cruz;Yapacaní;-16.321.229;-63.070.228;False;True
+EST-SC-0096;Posta Sanitaria Temporal;Posta de Salud;1;Rural;SEDES Santa Cruz;Red de Salud SC Sur (Urbana);Santa Cruz;Mineros;-17.037.587;-6.456.995;True;True
+EST-SC-0097;Posta Sanitaria Alalay;Posta de Salud;1;Rural;SEDES Santa Cruz;Red de Salud SC Este;Santa Cruz;San Julián;-19.188.584;-62.078.355;True;True
+EST-SC-0098;Hospital Walter Khon Jaihuayco;Hospital de 2do Nivel;2;Urbana;SEDES Santa Cruz;Red de Salud Montero;Santa Cruz;Concepción;-18.148.148;-64.619.786;True;True
+EST-SC-0099;Centro Materno Infantil Valle Hermoso;Centro de Salud;1;Urbana;SEDES Santa Cruz;Red de Salud Warnes-Cotoca;Santa Cruz;Roboré;-18.251.219;-6.325.809;True;True
+EST-SC-0100;Centro Materno Infantil Cerro Verde;Centro de Salud;1;Urbana;SEDES Santa Cruz;Red de Salud Chiquitanía;Santa Cruz;Vallegrande;-17.519.477;-62.443.682;True;True
+EST-SC-0101;Centro Ambulatorio Villa Pagador;Centro de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud Guarayos;Santa Cruz;Santa Cruz de la Sierra;-17.457.334;-63.946.941;True;True
+EST-SC-0102;Posta de Salud San Sebastián;Posta de Salud;1;Rural;SEDES Santa Cruz;Red de Salud Cordillera (Camiri);Santa Cruz;Montero;-18.821.423;-63.942.127;True;True
+EST-SC-0103;Centro de Salud La Cancha;Centro de Salud;1;Urbana;SEDES Santa Cruz;Red de Salud SC Norte (Plan 3000);Santa Cruz;Warnes;-17.706.466;-6.344.881;False;True
+EST-SC-0104;Centro Materno Infantil Chimba;Centro de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud SC Sur (Urbana);Santa Cruz;Cotoca;-192.641;-61.754.799;True;True
+EST-SC-0105;Posta Sanitaria San Pedro;Posta de Salud;1;Rural;SEDES Santa Cruz;Red de Salud SC Este;Santa Cruz;La Guardia;-17.565.162;-63.840.063;False;True
+EST-SC-0106;Policlínico Alto Lima;Centro de Salud;1;Urbana;SEDES Santa Cruz;Red de Salud Montero;Santa Cruz;Camiri;-17.071.258;-6.309.048;True;True
+EST-SC-0107;Hospital Provincial Villa Ingenio;Hospital de 2do Nivel;2;Urbana;SEDES Santa Cruz;Red de Salud Warnes-Cotoca;Santa Cruz;Puerto Suarez;-18.318.073;-62.898.351;True;True
+EST-SC-0108;Centro Integral de Salud Nuevos Horizontes;Centro de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud Chiquitanía;Santa Cruz;San Ignacio de Velasco;-18.312.938;-62.250.377;True;True
+EST-SC-0109;Puesto de Salud Franz Tamayo;Posta de Salud;1;Rural;SEDES Santa Cruz;Red de Salud Guarayos;Santa Cruz;Portachuelo;-17.461.694;-62.297.132;True;True
+EST-SC-0110;Posta Sanitaria Mariscal Sucre;Posta de Salud;1;Rural;SEDES Santa Cruz;Red de Salud Cordillera (Camiri);Santa Cruz;Yapacaní;-17.087.398;-61.864.979;True;True
+EST-SC-0111;Posta Sanitaria Bolívar;Posta de Salud;1;Rural;SEDES Santa Cruz;Red de Salud SC Norte (Plan 3000);Santa Cruz;Mineros;-16.935.457;-62.196.177;False;True
+EST-SC-0112;Posta de Salud Litoral;Posta de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud SC Sur (Urbana);Santa Cruz;San Julián;-17.284.408;-63.110.804;True;True
+EST-SC-0113;Centro Ambulatorio Tupac Katari;Centro de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud SC Este;Santa Cruz;Concepción;-17.407.695;-63.060.657;True;True
+EST-SC-0114;Centro Integral de Salud Bartolina Sisa;Centro de Salud;1;Urbana;SEDES Santa Cruz;Red de Salud Montero;Santa Cruz;Roboré;-16.560.584;-62.807.286;True;True
+EST-SC-0115;Posta Sanitaria Illimani;Posta de Salud;1;Rural;SEDES Santa Cruz;Red de Salud Warnes-Cotoca;Santa Cruz;Vallegrande;-16.897.924;-62.819.782;True;True
+EST-SC-0116;Posta Sanitaria Chacaltaya;Posta de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud Chiquitanía;Santa Cruz;Santa Cruz de la Sierra;-17.159.059;-62.344.284;True;True
+EST-SC-0117;Posta de Salud Huayna Potosí;Posta de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud Guarayos;Santa Cruz;Montero;-18.253.755;-62.216.228;True;True
+EST-SC-0118;Hospital Germán Busch Sajama;Hospital de 2do Nivel;2;Urbana;SEDES Santa Cruz;Red de Salud Cordillera (Camiri);Santa Cruz;Warnes;-17.773.135;-63.060.418;True;True
+EST-SC-0119;Puesto de Salud Tunari;Posta de Salud;1;Rural;SEDES Santa Cruz;Red de Salud SC Norte (Plan 3000);Santa Cruz;Cotoca;-17.198.155;-63.051.827;True;True
+EST-SC-0120;Centro Integral de Salud Toro Toro;Centro de Salud;1;Urbana;SEDES Santa Cruz;Red de Salud SC Sur (Urbana);Santa Cruz;La Guardia;-18.597.947;-63.409.209;True;True
+EST-SC-0121;Posta Sanitaria Tarapacá;Posta de Salud;1;Rural;SEDES Santa Cruz;Red de Salud SC Este;Santa Cruz;Camiri;-18.511.953;-62.501.713;True;True
+EST-SC-0122;Posta de Salud El Carmen;Posta de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud Montero;Santa Cruz;Puerto Suarez;-17.158.284;-64.222.383;True;True
+EST-SC-0123;Micro Hospital Villa Primavera;Centro de Salud;1;Urbana;SEDES Santa Cruz;Red de Salud Warnes-Cotoca;Santa Cruz;San Ignacio de Velasco;-16.758.681;-61.947.941;True;True
+EST-SC-0124;Centro Materno Infantil Nueva Esperanza;Centro de Salud;1;Urbana;SEDES Santa Cruz;Red de Salud Chiquitanía;Santa Cruz;Portachuelo;-16.517.474;-62.070.311;True;True
+EST-SC-0125;Centro de Salud Progreso;Centro de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud Guarayos;Santa Cruz;Yapacaní;-18.663.261;-6.231.663;True;True
+EST-SC-0126;Centro Integral de Salud Unión;Centro de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud Cordillera (Camiri);Santa Cruz;Mineros;-18.240.962;-6.363.914;True;True
+EST-SC-0127;Centro Materno Infantil Libertad;Centro de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud SC Norte (Plan 3000);Santa Cruz;San Julián;-18.535.321;-62.947.104;True;True
+EST-SC-0128;Micro Hospital Porvenir;Centro de Salud;1;Urbana;SEDES Santa Cruz;Red de Salud SC Sur (Urbana);Santa Cruz;Concepción;-17.383.207;-64.640.717;True;True
+EST-SC-0129;Posta de Salud Villa Adela;Posta de Salud;1;Rural;SEDES Santa Cruz;Red de Salud SC Este;Santa Cruz;Roboré;-16.698.104;-63.074.791;True;True
+EST-SC-0130;Centro Ambulatorio Villa Fátima;Centro de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud Montero;Santa Cruz;Vallegrande;-18.650.283;-61.985.837;True;True
+EST-SC-0131;Hospital Municipal San Antonio;Hospital de 3er Nivel;3;Urbana;SEDES Santa Cruz;Red de Salud Warnes-Cotoca;Santa Cruz;Santa Cruz de la Sierra;-17.517.639;-63.797.866;True;True
+EST-SC-0132;Centro de Salud Villa Victoria;Centro de Salud;1;Urbana;SEDES Santa Cruz;Red de Salud Chiquitanía;Santa Cruz;Montero;-17.601.079;-64.214.279;True;True
+EST-SC-0133;Posta Sanitaria Miraflores;Posta de Salud;1;Rural;SEDES Santa Cruz;Red de Salud Guarayos;Santa Cruz;Warnes;-17.348.001;-63.453.797;True;True
+EST-SC-0134;Posta de Salud Sopocachi;Posta de Salud;1;Rural;SEDES Santa Cruz;Red de Salud Cordillera (Camiri);Santa Cruz;Cotoca;-17.624.832;-63.918.334;True;True
+EST-SC-0135;Centro de Salud Obrajes;Centro de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud SC Norte (Plan 3000);Santa Cruz;La Guardia;-18.744.366;-62.721.762;True;True
+EST-SC-0136;Centro Ambulatorio Calacoto;Centro de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud SC Sur (Urbana);Santa Cruz;Camiri;-1.685.945;-61.792.052;False;True
+EST-SC-0137;Centro Integral de Salud Chasquipampa;Centro de Salud;1;Urbana;SEDES Santa Cruz;Red de Salud SC Este;Santa Cruz;Puerto Suarez;-19.023.474;-64.056.341;True;True
+EST-SC-0138;Centro Materno Infantil Irpavi;Centro de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud Montero;Santa Cruz;San Ignacio de Velasco;-16.548.128;-62.805.716;True;True
+EST-SC-0139;Centro Materno Infantil Achumani;Centro de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud Warnes-Cotoca;Santa Cruz;Portachuelo;-18.244.424;-62.358.496;True;True
+EST-SC-0140;Centro Integral de Salud Cota Cota;Centro de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud Chiquitanía;Santa Cruz;Yapacaní;-1.885.966;-62.074.596;True;True
+EST-SC-0141;Posta de Salud Mallasa;Posta de Salud;1;Rural;SEDES Santa Cruz;Red de Salud Guarayos;Santa Cruz;Mineros;-17.742.627;-62.454.939;False;True
+EST-SC-0142;Centro Ambulatorio Kupini;Centro de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud Cordillera (Camiri);Santa Cruz;San Julián;-16.326.793;-63.102.929;True;True
+EST-SC-0143;Hospital del Niño Santiago de Lacaya;Hospital de 3er Nivel;3;Urbana;SEDES Santa Cruz;Red de Salud SC Norte (Plan 3000);Santa Cruz;Concepción;-17.691.015;-62.234.837;True;True
+EST-SC-0144;Centro Ambulatorio Senkata;Centro de Salud;1;Periurbana;SEDES Santa Cruz;Red de Salud SC Sur (Urbana);Santa Cruz;Roboré;-18.660.736;-64.647.013;True;True
+EST-SC-0145;Posta Sanitaria Río Seco;Posta de Salud;1;Rural;SEDES Santa Cruz;Red de Salud SC Este;Santa Cruz;Vallegrande;-1.728.489;-64.153.886;False;True
+EST-CB-0146;Centro Integral de Salud Ciudad Satélite;Centro de Salud;1;Urbana;SEDES Cochabamba;Red de Salud Cochabamba Urbana;Cochabamba;Cochabamba;-1.759.458;-65.517.922;True;True
+EST-CB-0147;Posta de Salud Villa Dolores;Posta de Salud;1;Rural;SEDES Cochabamba;Red de Salud Quillacollo;Cochabamba;Quillacollo;-17.685.829;-66.362.058;False;True
+EST-CB-0148;Centro Integral de Salud Plan 3000;Centro de Salud;1;Urbana;SEDES Cochabamba;Red de Salud Sacaba;Cochabamba;Sacaba;-16.754.278;-66.670.998;True;True
+EST-CB-0149;Policlínico Pampa de la Isla;Centro de Salud;1;Urbana;SEDES Cochabamba;Red de Salud Valle Alto (Punata-Cliza);Cochabamba;Tiquipaya;-18.018.004;-66.165.087;True;True
+EST-CB-0150;Posta de Salud Los Lotes;Posta de Salud;1;Rural;SEDES Cochabamba;Red de Salud Trópico (Chapare);Cochabamba;Colcapirhua;-17.597.844;-66.282.089;False;True
+EST-CB-0151;Policlínico La Ramada;Centro de Salud;1;Periurbana;SEDES Cochabamba;Red de Salud Mizque-Aiquile;Cochabamba;Punata;-16.970.818;-65.887.425;True;True
+EST-CB-0152;Centro Materno Infantil Equipetrol;Centro de Salud;1;Periurbana;SEDES Cochabamba;Red de Salud Cochabamba Urbana;Cochabamba;Cliza;-16.743.062;-65.753.981;True;True
+EST-CB-0153;Hospital Germán Busch Urbarí;Hospital de 2do Nivel;2;Urbana;SEDES Cochabamba;Red de Salud Quillacollo;Cochabamba;Arani;-17.028.251;-65.965.471;True;True
+EST-CB-0154;Posta de Salud Las Palmas;Posta de Salud;1;Periurbana;SEDES Cochabamba;Red de Salud Sacaba;Cochabamba;Vinto;-17.184.669;-65.889.555;True;True
+EST-CB-0155;Hospital Materno Infantil Hamacas;Hospital de 3er Nivel;3;Urbana;SEDES Cochabamba;Red de Salud Valle Alto (Punata-Cliza);Cochabamba;Sipe Sipe;-16.690.905;-66.081.871;True;True
+EST-CB-0156;Hospital Walter Khon Colquiri;Hospital de 2do Nivel;2;Urbana;SEDES Cochabamba;Red de Salud Trópico (Chapare);Cochabamba;Chapare (Villa Tunari);-17.673.711;-65.565.845;False;True
+EST-CB-0157;Centro Ambulatorio Tiquipaya Norte;Centro de Salud;1;Urbana;SEDES Cochabamba;Red de Salud Mizque-Aiquile;Cochabamba;Chimoré;-17.452.799;-66.128.592;True;True
+EST-CB-0158;Centro Materno Infantil Sacaba Sur;Centro de Salud;1;Urbana;SEDES Cochabamba;Red de Salud Cochabamba Urbana;Cochabamba;Ivirgarzama;-17.982.266;-65.885.196;True;True
+EST-CB-0159;Hospital Germán Busch Quillacollo Centro;Hospital de 2do Nivel;2;Urbana;SEDES Cochabamba;Red de Salud Quillacollo;Cochabamba;Tarata;-17.334.712;-65.752.988;True;True
+EST-CB-0160;Posta Sanitaria Temporal;Posta de Salud;1;Periurbana;SEDES Cochabamba;Red de Salud Sacaba;Cochabamba;Mizque;-17.505.491;-6.621.328;False;True
+EST-CB-0161;Centro Integral de Salud Alalay;Centro de Salud;1;Periurbana;SEDES Cochabamba;Red de Salud Valle Alto (Punata-Cliza);Cochabamba;Cochabamba;-16.971.703;-65.462.892;True;True
+EST-CB-0162;Micro Hospital Jaihuayco;Centro de Salud;1;Urbana;SEDES Cochabamba;Red de Salud Trópico (Chapare);Cochabamba;Quillacollo;-1.727.694;-66.479.638;True;True
+EST-CB-0163;Centro Materno Infantil Valle Hermoso;Centro de Salud;1;Periurbana;SEDES Cochabamba;Red de Salud Mizque-Aiquile;Cochabamba;Sacaba;-17.755.712;-66.705.336;True;True
+EST-CB-0164;Centro Ambulatorio Cerro Verde;Centro de Salud;1;Urbana;SEDES Cochabamba;Red de Salud Cochabamba Urbana;Cochabamba;Tiquipaya;-17.701.828;-65.585.525;True;True
+EST-CB-0165;Centro Materno Infantil Villa Pagador;Centro de Salud;1;Urbana;SEDES Cochabamba;Red de Salud Quillacollo;Cochabamba;Colcapirhua;-16.760.054;-65.759.117;True;True
+EST-CB-0166;Posta Sanitaria San Sebastián;Posta de Salud;1;Rural;SEDES Cochabamba;Red de Salud Sacaba;Cochabamba;Punata;-16.824.786;-65.475.141;False;True
+EST-CB-0167;Micro Hospital La Cancha;Centro de Salud;1;Periurbana;SEDES Cochabamba;Red de Salud Valle Alto (Punata-Cliza);Cochabamba;Cliza;-17.239.168;-66.142.236;True;True
+EST-CB-0168;Centro de Salud Chimba;Centro de Salud;1;Periurbana;SEDES Cochabamba;Red de Salud Trópico (Chapare);Cochabamba;Arani;-16.933.312;-65.738.922;True;True
+EST-CB-0169;Centro Materno Infantil San Pedro;Centro de Salud;1;Periurbana;SEDES Cochabamba;Red de Salud Mizque-Aiquile;Cochabamba;Vinto;-17.846.547;-66.305.261;True;True
+EST-CB-0170;Policlínico Alto Lima;Centro de Salud;1;Urbana;SEDES Cochabamba;Red de Salud Cochabamba Urbana;Cochabamba;Sipe Sipe;-17.776.655;-66.108.236;True;True
+EST-CB-0171;Hospital Virgen de Remedios Villa Ingenio;Hospital de 2do Nivel;2;Urbana;SEDES Cochabamba;Red de Salud Quillacollo;Cochabamba;Chapare (Villa Tunari);-17.542.362;-66.477.857;True;True
+EST-CB-0172;Posta Sanitaria Nuevos Horizontes;Posta de Salud;1;Periurbana;SEDES Cochabamba;Red de Salud Sacaba;Cochabamba;Chimoré;-17.172.661;-660.888;True;True
+EST-CB-0173;Policlínico Franz Tamayo;Centro de Salud;1;Periurbana;SEDES Cochabamba;Red de Salud Valle Alto (Punata-Cliza);Cochabamba;Ivirgarzama;-17.395.774;-66.746.535;True;True
+EST-CB-0174;Hospital Municipal Mariscal Sucre;Hospital de 2do Nivel;2;Urbana;SEDES Cochabamba;Red de Salud Trópico (Chapare);Cochabamba;Tarata;-18.003.876;-65.623.931;True;True
+EST-CB-0175;Centro Integral de Salud Bolívar;Centro de Salud;1;Urbana;SEDES Cochabamba;Red de Salud Mizque-Aiquile;Cochabamba;Mizque;-1.687.971;-65.832.526;True;True
+EST-CB-0176;Policlínico Litoral;Centro de Salud;1;Periurbana;SEDES Cochabamba;Red de Salud Cochabamba Urbana;Cochabamba;Cochabamba;-17.098.292;-65.688.181;True;True
+EST-CB-0177;Posta Sanitaria Tupac Katari;Posta de Salud;1;Rural;SEDES Cochabamba;Red de Salud Quillacollo;Cochabamba;Quillacollo;-16.855.708;-65.514.159;True;True
+EST-CB-0178;Hospital San Juan de Dios Bartolina Sisa;Hospital de 3er Nivel;3;Urbana;SEDES Cochabamba;Red de Salud Sacaba;Cochabamba;Sacaba;-17.049.088;-66.634.936;True;True
+EST-CB-0179;Centro Integral de Salud Illimani;Centro de Salud;1;Urbana;SEDES Cochabamba;Red de Salud Valle Alto (Punata-Cliza);Cochabamba;Tiquipaya;-17.226.302;-65.486.339;True;True
+EST-CB-0180;Posta de Salud Chacaltaya;Posta de Salud;1;Periurbana;SEDES Cochabamba;Red de Salud Trópico (Chapare);Cochabamba;Colcapirhua;-17.940.227;-65.794.561;True;False
+EST-CB-0181;Centro Materno Infantil Huayna Potosí;Centro de Salud;1;Urbana;SEDES Cochabamba;Red de Salud Mizque-Aiquile;Cochabamba;Punata;-17.034.822;-6.575.567;True;True
+EST-CB-0182;Posta de Salud Sajama;Posta de Salud;1;Periurbana;SEDES Cochabamba;Red de Salud Cochabamba Urbana;Cochabamba;Cliza;-17.097.999;-66.196.997;True;True
+EST-CB-0183;Posta Sanitaria Tunari;Posta de Salud;1;Periurbana;SEDES Cochabamba;Red de Salud Quillacollo;Cochabamba;Arani;-16.733.571;-65.810.487;True;True
+EST-CB-0184;Hospital de Clínicas Toro Toro;Hospital de 3er Nivel;3;Urbana;SEDES Cochabamba;Red de Salud Sacaba;Cochabamba;Vinto;-17.636.946;-661.759;True;True
+EST-CB-0185;Centro Ambulatorio Tarapacá;Centro de Salud;1;Urbana;SEDES Cochabamba;Red de Salud Valle Alto (Punata-Cliza);Cochabamba;Sipe Sipe;-16.767.975;-66.716.929;False;True
+EST-CB-0186;Puesto de Salud El Carmen;Posta de Salud;1;Rural;SEDES Cochabamba;Red de Salud Trópico (Chapare);Cochabamba;Chapare (Villa Tunari);-17.974.667;-65.907.301;False;True
+EST-CB-0187;Posta de Salud Villa Primavera;Posta de Salud;1;Periurbana;SEDES Cochabamba;Red de Salud Mizque-Aiquile;Cochabamba;Chimoré;-17.502.382;-65.966.064;True;True
+EST-CB-0188;Posta de Salud Nueva Esperanza;Posta de Salud;1;Rural;SEDES Cochabamba;Red de Salud Cochabamba Urbana;Cochabamba;Ivirgarzama;-17.075.808;-65.815.828;True;True
+EST-CB-0189;Posta Sanitaria Progreso;Posta de Salud;1;Periurbana;SEDES Cochabamba;Red de Salud Quillacollo;Cochabamba;Tarata;-17.427.506;-65.504.529;True;True
+EST-CB-0190;Puesto de Salud Unión;Posta de Salud;1;Rural;SEDES Cochabamba;Red de Salud Sacaba;Cochabamba;Mizque;-17.347.504;-66.834.993;False;True
+EST-CB-0191;Posta Sanitaria Libertad;Posta de Salud;1;Rural;SEDES Cochabamba;Red de Salud Valle Alto (Punata-Cliza);Cochabamba;Cochabamba;-16.974.848;-66.185.869;True;True
+EST-CB-0192;Posta de Salud Porvenir;Posta de Salud;1;Rural;SEDES Cochabamba;Red de Salud Trópico (Chapare);Cochabamba;Quillacollo;-17.401.768;-66.770.107;True;True
+EST-CB-0193;Puesto de Salud Villa Adela;Posta de Salud;1;Periurbana;SEDES Cochabamba;Red de Salud Mizque-Aiquile;Cochabamba;Sacaba;-17.880.587;-66.209.562;True;True
+EST-CB-0194;Posta Sanitaria Villa Fátima;Posta de Salud;1;Rural;SEDES Cochabamba;Red de Salud Cochabamba Urbana;Cochabamba;Tiquipaya;-17.117.025;-65.655.829;False;True
+EST-CB-0195;Centro de Salud San Antonio;Centro de Salud;1;Urbana;SEDES Cochabamba;Red de Salud Quillacollo;Cochabamba;Colcapirhua;-16.708.672;-66.660.506;True;True
+EST-CB-0196;Posta Sanitaria Villa Victoria;Posta de Salud;1;Periurbana;SEDES Cochabamba;Red de Salud Sacaba;Cochabamba;Punata;-16.772.267;-66.758.617;True;True
+EST-CB-0197;Hospital Provincial Miraflores;Hospital de 2do Nivel;2;Urbana;SEDES Cochabamba;Red de Salud Valle Alto (Punata-Cliza);Cochabamba;Cliza;-17.589.078;-66.409.067;False;True
+EST-CB-0198;Puesto de Salud Sopocachi;Posta de Salud;1;Rural;SEDES Cochabamba;Red de Salud Trópico (Chapare);Cochabamba;Arani;-17.855.524;-66.713.605;False;True
+EST-CB-0199;Hospital Obrero Obrajes;Hospital de 3er Nivel;3;Urbana;SEDES Cochabamba;Red de Salud Mizque-Aiquile;Cochabamba;Vinto;-17.226.754;-66.001.878;True;True
+EST-CB-0200;Posta Sanitaria Calacoto;Posta de Salud;1;Periurbana;SEDES Cochabamba;Red de Salud Cochabamba Urbana;Cochabamba;Sipe Sipe;-17.232.839;-66.181.842;True;True
+EST-PT-0201;Centro Ambulatorio Chasquipampa;Centro de Salud;1;Urbana;SEDES Potosí;Red de Salud Potosí Urbana;Potosí;Potosí;-19.292.845;-65.697.195;True;True
+EST-PT-0202;Hospital Walter Khon Irpavi;Hospital de 2do Nivel;2;Urbana;SEDES Potosí;Red de Salud Norte (Llallagua-Uncía);Potosí;Llallagua;-19.279.412;-65.791.442;True;True
+EST-PT-0203;Micro Hospital Achumani;Centro de Salud;1;Urbana;SEDES Potosí;Red de Salud Sur (Tupiza-Villazón);Potosí;Villazón;-19.000.603;-65.432.584;True;True
+EST-PT-0204;Posta Sanitaria Cota Cota;Posta de Salud;1;Rural;SEDES Potosí;Red de Salud Uyuni-Colcha K;Potosí;Tupiza;-19.495.043;-65.763.446;True;True
+EST-PT-0205;Centro Ambulatorio Mallasa;Centro de Salud;1;Urbana;SEDES Potosí;Red de Salud Potosí Urbana;Potosí;Uyuni;-20.064.634;-65.824.754;False;True
+EST-PT-0206;Posta de Salud Kupini;Posta de Salud;1;Rural;SEDES Potosí;Red de Salud Norte (Llallagua-Uncía);Potosí;Betanzos;-19.837.922;-64.774.701;True;True
+EST-PT-0207;Centro Materno Infantil Santiago de Lacaya;Centro de Salud;1;Urbana;SEDES Potosí;Red de Salud Sur (Tupiza-Villazón);Potosí;Colquechaca;-1.978.897;-65.537.623;True;True
+EST-PT-0208;Puesto de Salud Senkata;Posta de Salud;1;Rural;SEDES Potosí;Red de Salud Uyuni-Colcha K;Potosí;Uncía;-18.755.273;-66.328.676;False;True
+EST-PT-0209;Puesto de Salud Río Seco;Posta de Salud;1;Periurbana;SEDES Potosí;Red de Salud Potosí Urbana;Potosí;Cotagaita;-1.976.938;-65.546.289;True;True
+EST-PT-0210;Micro Hospital Ciudad Satélite;Centro de Salud;1;Periurbana;SEDES Potosí;Red de Salud Norte (Llallagua-Uncía);Potosí;Puna;-19.595.444;-66.255.538;False;True
+EST-PT-0211;Centro de Salud Villa Dolores;Centro de Salud;1;Periurbana;SEDES Potosí;Red de Salud Sur (Tupiza-Villazón);Potosí;Sacaca;-20.389.477;-65.445.754;True;True
+EST-PT-0212;Posta de Salud Plan 3000;Posta de Salud;1;Rural;SEDES Potosí;Red de Salud Uyuni-Colcha K;Potosí;Ravelo;-19.033.054;-66.488.253;False;True
+EST-PT-0213;Policlínico Pampa de la Isla;Centro de Salud;1;Urbana;SEDES Potosí;Red de Salud Potosí Urbana;Potosí;Tinguipaya;-19.918.221;-65.852.445;True;True
+EST-PT-0214;Policlínico Los Lotes;Centro de Salud;1;Periurbana;SEDES Potosí;Red de Salud Norte (Llallagua-Uncía);Potosí;Potosí;-20.074.944;-66.031.499;True;True
+EST-PT-0215;Centro Materno Infantil La Ramada;Centro de Salud;1;Urbana;SEDES Potosí;Red de Salud Sur (Tupiza-Villazón);Potosí;Llallagua;-18.891.659;-6.513.866;True;True
+EST-PT-0216;Micro Hospital Equipetrol;Centro de Salud;1;Urbana;SEDES Potosí;Red de Salud Uyuni-Colcha K;Potosí;Villazón;-18.606.614;-66.504.058;True;True
+EST-PT-0217;Puesto de Salud Urbarí;Posta de Salud;1;Rural;SEDES Potosí;Red de Salud Potosí Urbana;Potosí;Tupiza;-1.871.225;-66.117.688;True;True
+EST-PT-0218;Hospital Bracamonte Las Palmas;Hospital de 2do Nivel;2;Urbana;SEDES Potosí;Red de Salud Norte (Llallagua-Uncía);Potosí;Uyuni;-19.620.206;-65.378.065;True;True
+EST-PT-0219;Puesto de Salud Hamacas;Posta de Salud;1;Rural;SEDES Potosí;Red de Salud Sur (Tupiza-Villazón);Potosí;Betanzos;-19.548.808;-65.772.307;False;True
+EST-PT-0220;Hospital General Colquiri;Hospital de 3er Nivel;3;Urbana;SEDES Potosí;Red de Salud Uyuni-Colcha K;Potosí;Colquechaca;-19.170.638;-66.346.293;True;False
+EST-PT-0221;Hospital Germán Busch Tiquipaya Norte;Hospital de 2do Nivel;2;Urbana;SEDES Potosí;Red de Salud Potosí Urbana;Potosí;Uncía;-20.267.672;-66.280.877;False;True
+EST-PT-0222;Puesto de Salud Sacaba Sur;Posta de Salud;1;Periurbana;SEDES Potosí;Red de Salud Norte (Llallagua-Uncía);Potosí;Cotagaita;-19.213.504;-6.575.565;True;True
+EST-PT-0223;Centro Materno Infantil Quillacollo Centro;Centro de Salud;1;Urbana;SEDES Potosí;Red de Salud Sur (Tupiza-Villazón);Potosí;Puna;-18.988.979;-64.912.644;True;True
+EST-PT-0224;Posta de Salud Temporal;Posta de Salud;1;Rural;SEDES Potosí;Red de Salud Uyuni-Colcha K;Potosí;Sacaca;-19.882.853;-66.431.425;False;True
+EST-PT-0225;Posta de Salud Alalay;Posta de Salud;1;Periurbana;SEDES Potosí;Red de Salud Potosí Urbana;Potosí;Ravelo;-19.015.229;-65.615.967;True;True
+EST-PT-0226;Centro Ambulatorio Jaihuayco;Centro de Salud;1;Periurbana;SEDES Potosí;Red de Salud Norte (Llallagua-Uncía);Potosí;Tinguipaya;-19.703.655;-64.947.249;False;True
+EST-PT-0227;Posta de Salud Valle Hermoso;Posta de Salud;1;Rural;SEDES Potosí;Red de Salud Sur (Tupiza-Villazón);Potosí;Potosí;-19.491.022;-66.738.483;True;True
+EST-PT-0228;Micro Hospital Cerro Verde;Centro de Salud;1;Urbana;SEDES Potosí;Red de Salud Uyuni-Colcha K;Potosí;Llallagua;-19.483.001;-65.557.029;True;True
+EST-PT-0229;Hospital de la Mujer Villa Pagador;Hospital de 3er Nivel;3;Urbana;SEDES Potosí;Red de Salud Potosí Urbana;Potosí;Villazón;-20.243.111;-65.464.848;True;True
+EST-PT-0230;Centro Integral de Salud San Sebastián;Centro de Salud;1;Urbana;SEDES Potosí;Red de Salud Norte (Llallagua-Uncía);Potosí;Tupiza;-20.528.716;-66.067.504;True;True
+EST-PT-0231;Centro Materno Infantil La Cancha;Centro de Salud;1;Urbana;SEDES Potosí;Red de Salud Sur (Tupiza-Villazón);Potosí;Uyuni;-19.791.269;-65.651.172;True;True
+EST-PT-0232;Micro Hospital Chimba;Centro de Salud;1;Urbana;SEDES Potosí;Red de Salud Uyuni-Colcha K;Potosí;Betanzos;-20.564.874;-65.455.051;False;True
+EST-PT-0233;Puesto de Salud San Pedro;Posta de Salud;1;Rural;SEDES Potosí;Red de Salud Potosí Urbana;Potosí;Colquechaca;-19.621.634;-66.360.883;True;True
+EST-PT-0234;Centro Ambulatorio Alto Lima;Centro de Salud;1;Urbana;SEDES Potosí;Red de Salud Norte (Llallagua-Uncía);Potosí;Uncía;-18.973.948;-65.671.677;True;True
+EST-PT-0235;Posta de Salud Villa Ingenio;Posta de Salud;1;Periurbana;SEDES Potosí;Red de Salud Sur (Tupiza-Villazón);Potosí;Cotagaita;-18.933.652;-65.705.038;True;True
+EST-OR-0236;Puesto de Salud Nuevos Horizontes;Posta de Salud;1;Rural;SEDES Oruro;Red de Salud Oruro Urbana;Oruro;Oruro;-18.431.748;-67.029.225;True;False
+EST-OR-0237;Centro Ambulatorio Franz Tamayo;Centro de Salud;1;Urbana;SEDES Oruro;Red de Salud Huanuni-Machacamarca;Oruro;Huanuni;-18.507.905;-66.950.218;False;True
+EST-OR-0238;Posta Sanitaria Mariscal Sucre;Posta de Salud;1;Rural;SEDES Oruro;Red de Salud Challapata-Salinas;Oruro;Challapata;-17.607.507;-66.934.073;True;True
+EST-OR-0239;Posta de Salud Bolívar;Posta de Salud;1;Rural;SEDES Oruro;Red de Salud Oruro Urbana;Oruro;Caracollo;-17.623.369;-67.380.233;False;True
+EST-OR-0240;Posta Sanitaria Litoral;Posta de Salud;1;Periurbana;SEDES Oruro;Red de Salud Huanuni-Machacamarca;Oruro;Machacamarca;-18.380.355;-67.201.266;True;True
+EST-OR-0241;Posta de Salud Tupac Katari;Posta de Salud;1;Rural;SEDES Oruro;Red de Salud Challapata-Salinas;Oruro;Eucaliptus;-18.445.143;-67.681.634;False;True
+EST-OR-0242;Centro Integral de Salud Bartolina Sisa;Centro de Salud;1;Urbana;SEDES Oruro;Red de Salud Oruro Urbana;Oruro;Poopó;-17.801.581;-67.639.854;True;True
+EST-OR-0243;Centro Integral de Salud Illimani;Centro de Salud;1;Urbana;SEDES Oruro;Red de Salud Huanuni-Machacamarca;Oruro;Antequera;-1.804.616;-66.848.883;True;False
+EST-OR-0244;Hospital Integral Chacaltaya;Hospital de 2do Nivel;2;Urbana;SEDES Oruro;Red de Salud Challapata-Salinas;Oruro;Pazña;-17.836.137;-67.305.327;False;True
+EST-OR-0245;Micro Hospital Huayna Potosí;Centro de Salud;1;Periurbana;SEDES Oruro;Red de Salud Oruro Urbana;Oruro;Salinas de Garci Mendoza;-18.329.759;-67.321.954;True;True
+EST-OR-0246;Hospital Municipal Sajama;Hospital de 2do Nivel;2;Urbana;SEDES Oruro;Red de Salud Huanuni-Machacamarca;Oruro;Chipaya;-17.561.764;-66.906.477;True;True
+EST-OR-0247;Centro Integral de Salud Tunari;Centro de Salud;1;Periurbana;SEDES Oruro;Red de Salud Challapata-Salinas;Oruro;Toledo;-18.283.005;-6.716.177;True;True
+EST-OR-0248;Centro Ambulatorio Toro Toro;Centro de Salud;1;Urbana;SEDES Oruro;Red de Salud Oruro Urbana;Oruro;Oruro;-17.683.219;-67.151.753;True;True
+EST-OR-0249;Posta de Salud Tarapacá;Posta de Salud;1;Rural;SEDES Oruro;Red de Salud Huanuni-Machacamarca;Oruro;Huanuni;-17.654.195;-67.505.426;True;True
+EST-OR-0250;Posta de Salud El Carmen;Posta de Salud;1;Rural;SEDES Oruro;Red de Salud Challapata-Salinas;Oruro;Challapata;-17.382.516;-67.140.136;True;True
+EST-OR-0251;Posta Sanitaria Villa Primavera;Posta de Salud;1;Periurbana;SEDES Oruro;Red de Salud Oruro Urbana;Oruro;Caracollo;-17.447.599;-67.062.051;True;True
+EST-OR-0252;Posta Sanitaria Nueva Esperanza;Posta de Salud;1;Periurbana;SEDES Oruro;Red de Salud Huanuni-Machacamarca;Oruro;Machacamarca;-17.522.377;-66.979.816;True;True
+EST-OR-0253;Hospital Provincial Progreso;Hospital de 2do Nivel;2;Urbana;SEDES Oruro;Red de Salud Challapata-Salinas;Oruro;Eucaliptus;-18.196.246;-67.394.265;True;True
+EST-OR-0254;Posta de Salud Unión;Posta de Salud;1;Rural;SEDES Oruro;Red de Salud Oruro Urbana;Oruro;Poopó;-17.569.657;-67.374.356;False;True
+EST-OR-0255;Centro Ambulatorio Libertad;Centro de Salud;1;Urbana;SEDES Oruro;Red de Salud Huanuni-Machacamarca;Oruro;Antequera;-1.736.941;-6.668.829;True;True
+EST-OR-0256;Hospital de Distrito Porvenir;Hospital de 2do Nivel;2;Urbana;SEDES Oruro;Red de Salud Challapata-Salinas;Oruro;Pazña;-1.780.646;-66.900.835;True;True
+EST-OR-0257;Hospital Walter Khon Villa Adela;Hospital de 2do Nivel;2;Urbana;SEDES Oruro;Red de Salud Oruro Urbana;Oruro;Salinas de Garci Mendoza;-18.194.385;-67.612.897;True;True
+EST-OR-0258;Posta Sanitaria Villa Fátima;Posta de Salud;1;Periurbana;SEDES Oruro;Red de Salud Huanuni-Machacamarca;Oruro;Chipaya;-1.787.235;-66.590.723;True;True
+EST-OR-0259;Centro Ambulatorio San Antonio;Centro de Salud;1;Urbana;SEDES Oruro;Red de Salud Challapata-Salinas;Oruro;Toledo;-17.482.086;-66.714.801;True;False
+EST-OR-0260;Posta de Salud Villa Victoria;Posta de Salud;1;Rural;SEDES Oruro;Red de Salud Oruro Urbana;Oruro;Oruro;-18.478.193;-67.679.026;True;False
+EST-OR-0261;Centro Materno Infantil Miraflores;Centro de Salud;1;Urbana;SEDES Oruro;Red de Salud Huanuni-Machacamarca;Oruro;Huanuni;-1.795.263;-67.182.586;True;True
+EST-OR-0262;Centro Ambulatorio Sopocachi;Centro de Salud;1;Periurbana;SEDES Oruro;Red de Salud Challapata-Salinas;Oruro;Challapata;-18.122.242;-67.246.247;True;True
+EST-OR-0263;Centro Ambulatorio Obrajes;Centro de Salud;1;Periurbana;SEDES Oruro;Red de Salud Oruro Urbana;Oruro;Caracollo;-18.490.663;-66.875.958;False;True
+EST-CH-0264;Hospital Virgen de Remedios Calacoto;Hospital de 2do Nivel;2;Urbana;SEDES Chuquisaca;Red de Salud Sucre Urbana;Chuquisaca;Sucre;-18.597.686;-6.563.538;True;True
+EST-CH-0265;Puesto de Salud Chasquipampa;Posta de Salud;1;Rural;SEDES Chuquisaca;Red de Salud Nor Cinti (Camargo);Chuquisaca;Camargo;-19.477.767;-65.706.716;True;True
+EST-CH-0266;Posta Sanitaria Irpavi;Posta de Salud;1;Rural;SEDES Chuquisaca;Red de Salud Hernando Siles (Monteagudo);Chuquisaca;Monteagudo;-18.431.433;-65.340.345;True;True
+EST-CH-0267;Centro Ambulatorio Achumani;Centro de Salud;1;Urbana;SEDES Chuquisaca;Red de Salud Azurduy (Tarabuco);Chuquisaca;Padilla;-19.230.674;-64.517.884;True;True
+EST-CH-0268;Centro Ambulatorio Cota Cota;Centro de Salud;1;Urbana;SEDES Chuquisaca;Red de Salud Sucre Urbana;Chuquisaca;Tarabuco;-18.633.536;-65.840.624;True;True
+EST-CH-0269;Hospital del Niño Mallasa;Hospital de 3er Nivel;3;Urbana;SEDES Chuquisaca;Red de Salud Nor Cinti (Camargo);Chuquisaca;Zudáñez;-18.843.122;-6.574.183;True;True
+EST-CH-0270;Centro de Salud Kupini;Centro de Salud;1;Urbana;SEDES Chuquisaca;Red de Salud Hernando Siles (Monteagudo);Chuquisaca;Mojocoya;-19.122.996;-64.709.029;True;True
+EST-CH-0271;Centro Materno Infantil Santiago de Lacaya;Centro de Salud;1;Urbana;SEDES Chuquisaca;Red de Salud Azurduy (Tarabuco);Chuquisaca;Yamparáez;-18.807.263;-64.762.903;True;True
+EST-CH-0272;Centro Integral de Salud Senkata;Centro de Salud;1;Periurbana;SEDES Chuquisaca;Red de Salud Sucre Urbana;Chuquisaca;Presto;-18.321.465;-64.800.955;True;True
+EST-CH-0273;Micro Hospital Río Seco;Centro de Salud;1;Urbana;SEDES Chuquisaca;Red de Salud Nor Cinti (Camargo);Chuquisaca;Villa Serrano;-1.836.149;-65.655.107;True;True
+EST-CH-0274;Policlínico Ciudad Satélite;Centro de Salud;1;Urbana;SEDES Chuquisaca;Red de Salud Hernando Siles (Monteagudo);Chuquisaca;Huacareta;-19.486.856;-64.636.975;True;True
+EST-CH-0275;Hospital Municipal Villa Dolores;Hospital de 2do Nivel;2;Urbana;SEDES Chuquisaca;Red de Salud Azurduy (Tarabuco);Chuquisaca;Villa Abecia;-19.140.763;-65.983.471;True;True
+EST-CH-0276;Puesto de Salud Plan 3000;Posta de Salud;1;Rural;SEDES Chuquisaca;Red de Salud Sucre Urbana;Chuquisaca;Sucre;-19.830.626;-64.529.598;False;True
+EST-CH-0277;Policlínico Pampa de la Isla;Centro de Salud;1;Periurbana;SEDES Chuquisaca;Red de Salud Nor Cinti (Camargo);Chuquisaca;Camargo;-18.342.295;-64.805.852;True;True
+EST-CH-0278;Centro Ambulatorio Los Lotes;Centro de Salud;1;Periurbana;SEDES Chuquisaca;Red de Salud Hernando Siles (Monteagudo);Chuquisaca;Monteagudo;-19.425.926;-66.026.488;True;False
+EST-CH-0279;Centro de Salud La Ramada;Centro de Salud;1;Periurbana;SEDES Chuquisaca;Red de Salud Azurduy (Tarabuco);Chuquisaca;Padilla;-18.782.239;-66.043.316;True;True
+EST-CH-0280;Hospital Virgen de Remedios Equipetrol;Hospital de 2do Nivel;2;Urbana;SEDES Chuquisaca;Red de Salud Sucre Urbana;Chuquisaca;Tarabuco;-19.001.517;-65.992.878;False;True
+EST-CH-0281;Centro Integral de Salud Urbarí;Centro de Salud;1;Periurbana;SEDES Chuquisaca;Red de Salud Nor Cinti (Camargo);Chuquisaca;Zudáñez;-18.918.124;-64.863.083;True;True
+EST-CH-0282;Hospital Municipal Las Palmas;Hospital de 2do Nivel;2;Urbana;SEDES Chuquisaca;Red de Salud Hernando Siles (Monteagudo);Chuquisaca;Mojocoya;-18.365.066;-65.700.615;True;True
+EST-CH-0283;Centro de Salud Hamacas;Centro de Salud;1;Urbana;SEDES Chuquisaca;Red de Salud Azurduy (Tarabuco);Chuquisaca;Yamparáez;-19.411.934;-64.574.692;True;True
+EST-CH-0284;Hospital San Juan de Dios Colquiri;Hospital de 3er Nivel;3;Urbana;SEDES Chuquisaca;Red de Salud Sucre Urbana;Chuquisaca;Presto;-19.392.549;-64.754.485;False;True
+EST-CH-0285;Posta Sanitaria Tiquipaya Norte;Posta de Salud;1;Rural;SEDES Chuquisaca;Red de Salud Nor Cinti (Camargo);Chuquisaca;Villa Serrano;-19.496.299;-64.494.564;False;True
+EST-CH-0286;Policlínico Sacaba Sur;Centro de Salud;1;Urbana;SEDES Chuquisaca;Red de Salud Hernando Siles (Monteagudo);Chuquisaca;Huacareta;-186.449;-6.562.907;True;True
+EST-CH-0287;Hospital Bracamonte Quillacollo Centro;Hospital de 2do Nivel;2;Urbana;SEDES Chuquisaca;Red de Salud Azurduy (Tarabuco);Chuquisaca;Villa Abecia;-18.688.432;-64.751.543;True;True
+EST-CH-0288;Posta de Salud Temporal;Posta de Salud;1;Rural;SEDES Chuquisaca;Red de Salud Sucre Urbana;Chuquisaca;Sucre;-18.636.904;-64.870.522;False;True
+EST-CH-0289;Centro Ambulatorio Alalay;Centro de Salud;1;Periurbana;SEDES Chuquisaca;Red de Salud Nor Cinti (Camargo);Chuquisaca;Camargo;-18.831.934;-64.842.206;True;True
+EST-CH-0290;Hospital de Clínicas Jaihuayco;Hospital de 3er Nivel;3;Urbana;SEDES Chuquisaca;Red de Salud Hernando Siles (Monteagudo);Chuquisaca;Monteagudo;-18.663.261;-64.649.679;True;True
+EST-CH-0291;Posta Sanitaria Valle Hermoso;Posta de Salud;1;Rural;SEDES Chuquisaca;Red de Salud Azurduy (Tarabuco);Chuquisaca;Padilla;-18.961.864;-64.887.086;False;True
+EST-CH-0292;Micro Hospital Cerro Verde;Centro de Salud;1;Urbana;SEDES Chuquisaca;Red de Salud Sucre Urbana;Chuquisaca;Tarabuco;-19.011.345;-64.703.124;True;True
+EST-CH-0293;Hospital Japonés Villa Pagador;Hospital de 3er Nivel;3;Urbana;SEDES Chuquisaca;Red de Salud Nor Cinti (Camargo);Chuquisaca;Zudáñez;-18.317.082;-65.471.295;True;True
+EST-TJ-0294;Policlínico San Sebastián;Centro de Salud;1;Periurbana;SEDES Tarija;Red de Salud Tarija Urbana;Tarija;Tarija;-21.714.367;-64.801.945;True;True
+EST-TJ-0295;Micro Hospital La Cancha;Centro de Salud;1;Periurbana;SEDES Tarija;Red de Salud Gran Chaco (Yacuiba-Villamontes);Tarija;Yacuiba;-22.227.368;-65.180.278;True;True
+EST-TJ-0296;Micro Hospital Chimba;Centro de Salud;1;Urbana;SEDES Tarija;Red de Salud Bermejo;Tarija;Bermejo;-21.406.517;-64.756.638;True;True
+EST-TJ-0297;Centro Materno Infantil San Pedro;Centro de Salud;1;Urbana;SEDES Tarija;Red de Salud Tarija Urbana;Tarija;Villamontes;-21.385.117;-64.482.945;True;True
+EST-TJ-0298;Posta de Salud Alto Lima;Posta de Salud;1;Rural;SEDES Tarija;Red de Salud Gran Chaco (Yacuiba-Villamontes);Tarija;San Lorenzo;-220.214;-64.456.418;False;False
+EST-TJ-0299;Centro Materno Infantil Villa Ingenio;Centro de Salud;1;Urbana;SEDES Tarija;Red de Salud Bermejo;Tarija;El Puente;-21.613.721;-65.223.566;True;True
+EST-TJ-0300;Hospital Provincial Nuevos Horizontes;Hospital de 2do Nivel;2;Urbana;SEDES Tarija;Red de Salud Tarija Urbana;Tarija;Entre Ríos;-22.142.441;-64.308.086;True;True
+EST-TJ-0301;Centro de Salud Franz Tamayo;Centro de Salud;1;Urbana;SEDES Tarija;Red de Salud Gran Chaco (Yacuiba-Villamontes);Tarija;Caraparí;-21.339.352;-64.330.088;True;True
+EST-TJ-0302;Puesto de Salud Mariscal Sucre;Posta de Salud;1;Rural;SEDES Tarija;Red de Salud Bermejo;Tarija;Uriondo;-20.899.562;-65.145.889;True;False
+EST-TJ-0303;Policlínico Bolívar;Centro de Salud;1;Urbana;SEDES Tarija;Red de Salud Tarija Urbana;Tarija;Padcaya;-21.065.624;-65.047.701;True;True
+EST-TJ-0304;Posta Sanitaria Litoral;Posta de Salud;1;Periurbana;SEDES Tarija;Red de Salud Gran Chaco (Yacuiba-Villamontes);Tarija;Tarija;-21.914.242;-6.490.232;True;True
+EST-TJ-0305;Micro Hospital Tupac Katari;Centro de Salud;1;Periurbana;SEDES Tarija;Red de Salud Bermejo;Tarija;Yacuiba;-21.346.361;-65.360.221;False;True
+EST-TJ-0306;Posta Sanitaria Bartolina Sisa;Posta de Salud;1;Rural;SEDES Tarija;Red de Salud Tarija Urbana;Tarija;Bermejo;-21.914.687;-65.246.111;True;True
+EST-TJ-0307;Micro Hospital Illimani;Centro de Salud;1;Urbana;SEDES Tarija;Red de Salud Gran Chaco (Yacuiba-Villamontes);Tarija;Villamontes;-22.150.123;-65.034.938;True;True
+EST-TJ-0308;Posta Sanitaria Chacaltaya;Posta de Salud;1;Rural;SEDES Tarija;Red de Salud Bermejo;Tarija;San Lorenzo;-21.166.842;-64.800.364;False;True
+EST-TJ-0309;Policlínico Huayna Potosí;Centro de Salud;1;Urbana;SEDES Tarija;Red de Salud Tarija Urbana;Tarija;El Puente;-20.960.988;-65.235.056;True;True
+EST-TJ-0310;Centro Integral de Salud Sajama;Centro de Salud;1;Periurbana;SEDES Tarija;Red de Salud Gran Chaco (Yacuiba-Villamontes);Tarija;Entre Ríos;-21.462.351;-65.250.817;False;True
+EST-TJ-0311;Posta Sanitaria Tunari;Posta de Salud;1;Rural;SEDES Tarija;Red de Salud Bermejo;Tarija;Caraparí;-20.856.184;-65.070.858;False;True
+EST-TJ-0312;Policlínico Toro Toro;Centro de Salud;1;Urbana;SEDES Tarija;Red de Salud Tarija Urbana;Tarija;Uriondo;-2.090.415;-64.075.701;True;True
+EST-TJ-0313;Puesto de Salud Tarapacá;Posta de Salud;1;Rural;SEDES Tarija;Red de Salud Gran Chaco (Yacuiba-Villamontes);Tarija;Padcaya;-21.039.138;-64.644.288;True;True
+EST-TJ-0314;Posta Sanitaria El Carmen;Posta de Salud;1;Rural;SEDES Tarija;Red de Salud Bermejo;Tarija;Tarija;-2.112.162;-64.661.626;False;True
+EST-TJ-0315;Posta Sanitaria Villa Primavera;Posta de Salud;1;Rural;SEDES Tarija;Red de Salud Tarija Urbana;Tarija;Yacuiba;-20.906.023;-64.240.034;False;True
+EST-TJ-0316;Micro Hospital Nueva Esperanza;Centro de Salud;1;Periurbana;SEDES Tarija;Red de Salud Gran Chaco (Yacuiba-Villamontes);Tarija;Bermejo;-21.823.177;-64.328.242;True;True
+EST-TJ-0317;Puesto de Salud Progreso;Posta de Salud;1;Periurbana;SEDES Tarija;Red de Salud Bermejo;Tarija;Villamontes;-21.948.091;-65.067.931;True;True
+EST-TJ-0318;Posta Sanitaria Unión;Posta de Salud;1;Rural;SEDES Tarija;Red de Salud Tarija Urbana;Tarija;San Lorenzo;-22.053.245;-64.506.519;True;True
+EST-BN-0319;Posta Sanitaria Libertad;Posta de Salud;1;Periurbana;SEDES Beni;Red de Salud Trinidad;Beni;Trinidad;-14.690.846;-64.773.967;True;True
+EST-BN-0320;Centro Integral de Salud Porvenir;Centro de Salud;1;Urbana;SEDES Beni;Red de Salud Riberalta-Guayaramerín;Beni;Riberalta;-15.776.863;-64.523.728;True;True
+EST-BN-0321;Puesto de Salud Villa Adela;Posta de Salud;1;Rural;SEDES Beni;Red de Salud San Borja-Rurrenabaque;Beni;Guayaramerín;-15.581.864;-65.874.313;True;True
+EST-BN-0322;Centro de Salud Villa Fátima;Centro de Salud;1;Urbana;SEDES Beni;Red de Salud Trinidad;Beni;San Borja;-13.833.784;-64.820.731;True;True
+EST-BN-0323;Puesto de Salud San Antonio;Posta de Salud;1;Rural;SEDES Beni;Red de Salud Riberalta-Guayaramerín;Beni;San Ignacio de Moxos;-15.158.558;-63.946.753;True;True
+EST-BN-0324;Micro Hospital Villa Victoria;Centro de Salud;1;Periurbana;SEDES Beni;Red de Salud San Borja-Rurrenabaque;Beni;Rurrenabaque;-14.061.094;-65.348.411;True;False
+EST-BN-0325;Posta de Salud Miraflores;Posta de Salud;1;Periurbana;SEDES Beni;Red de Salud Trinidad;Beni;Santa Ana del Yacuma;-14.817.504;-63.778.896;True;False
+EST-BN-0326;Posta de Salud Sopocachi;Posta de Salud;1;Rural;SEDES Beni;Red de Salud Riberalta-Guayaramerín;Beni;Reyes;-13.637.012;-63.748.522;False;True
+EST-BN-0327;Puesto de Salud Obrajes;Posta de Salud;1;Rural;SEDES Beni;Red de Salud San Borja-Rurrenabaque;Beni;San Ramón;-14.303.551;-63.963.381;True;True
+EST-BN-0328;Micro Hospital Calacoto;Centro de Salud;1;Urbana;SEDES Beni;Red de Salud Trinidad;Beni;Magdalena;-13.826.301;-65.834.204;True;False
+EST-BN-0329;Posta de Salud Chasquipampa;Posta de Salud;1;Rural;SEDES Beni;Red de Salud Riberalta-Guayaramerín;Beni;Trinidad;-1.484.389;-64.112.202;True;True
+EST-BN-0330;Posta Sanitaria Irpavi;Posta de Salud;1;Rural;SEDES Beni;Red de Salud San Borja-Rurrenabaque;Beni;Riberalta;-15.454.302;-65.759.267;True;True
+EST-BN-0331;Posta de Salud Achumani;Posta de Salud;1;Rural;SEDES Beni;Red de Salud Trinidad;Beni;Guayaramerín;-14.644.601;-64.328.634;False;True
+EST-BN-0332;Centro de Salud Cota Cota;Centro de Salud;1;Urbana;SEDES Beni;Red de Salud Riberalta-Guayaramerín;Beni;San Borja;-14.407.174;-6.531.975;True;True
+EST-BN-0333;Centro de Salud Mallasa;Centro de Salud;1;Periurbana;SEDES Beni;Red de Salud San Borja-Rurrenabaque;Beni;San Ignacio de Moxos;-13.649.818;-6.592.559;True;True
+EST-BN-0334;Puesto de Salud Kupini;Posta de Salud;1;Rural;SEDES Beni;Red de Salud Trinidad;Beni;Rurrenabaque;-15.519.653;-66.020.346;True;True
+EST-BN-0335;Posta de Salud Santiago de Lacaya;Posta de Salud;1;Periurbana;SEDES Beni;Red de Salud Riberalta-Guayaramerín;Beni;Santa Ana del Yacuma;-14.137.726;-64.504.036;True;True
+EST-BN-0336;Puesto de Salud Senkata;Posta de Salud;1;Rural;SEDES Beni;Red de Salud San Borja-Rurrenabaque;Beni;Reyes;-15.094.577;-65.189.193;True;True
+EST-BN-0337;Hospital Integral Río Seco;Hospital de 2do Nivel;2;Urbana;SEDES Beni;Red de Salud Trinidad;Beni;San Ramón;-13.685.679;-65.834.271;True;True
+EST-BN-0338;Posta Sanitaria Ciudad Satélite;Posta de Salud;1;Periurbana;SEDES Beni;Red de Salud Riberalta-Guayaramerín;Beni;Magdalena;-1.572.411;-64.401.548;False;True
+EST-BN-0339;Posta de Salud Villa Dolores;Posta de Salud;1;Periurbana;SEDES Beni;Red de Salud San Borja-Rurrenabaque;Beni;Trinidad;-1.428.599;-65.368.597;True;True
+EST-BN-0340;Posta Sanitaria Plan 3000;Posta de Salud;1;Rural;SEDES Beni;Red de Salud Trinidad;Beni;Riberalta;-15.741.407;-65.935.982;True;True
+EST-PD-0341;Centro Materno Infantil Pampa de la Isla;Centro de Salud;1;Urbana;SEDES Pando;Red de Salud Cobija;Pando;Cobija;-10.872.628;-6.909.442;True;True
+EST-PD-0342;Hospital General Los Lotes;Hospital de 3er Nivel;3;Urbana;SEDES Pando;Red de Salud Madre de Dios;Pando;Porvenir;-10.426.417;-68.166.381;True;True
+EST-PD-0343;Puesto de Salud La Ramada;Posta de Salud;1;Rural;SEDES Pando;Red de Salud Cobija;Pando;Bolpebra;-11.446.784;-68.298.675;True;True
+EST-PD-0344;Posta Sanitaria Equipetrol;Posta de Salud;1;Rural;SEDES Pando;Red de Salud Madre de Dios;Pando;Bella Flor;-1.077.588;-69.166.308;True;True
+EST-PD-0345;Posta de Salud Urbarí;Posta de Salud;1;Periurbana;SEDES Pando;Red de Salud Cobija;Pando;Puerto Rico;-1.075.928;-68.243.141;False;True
+EST-PD-0346;Centro Materno Infantil Las Palmas;Centro de Salud;1;Periurbana;SEDES Pando;Red de Salud Madre de Dios;Pando;San Lorenzo (Pando);-11.086.907;-69.349.962;True;True
+EST-PD-0347;Micro Hospital Hamacas;Centro de Salud;1;Periurbana;SEDES Pando;Red de Salud Cobija;Pando;El Sena;-10.883.285;-68.445.786;True;True
+EST-PD-0348;Hospital San Roque Colquiri;Hospital de 2do Nivel;2;Urbana;SEDES Pando;Red de Salud Madre de Dios;Pando;Santa Rosa del Abuná;-10.571.199;-68.016.774;True;True
+EST-PD-0349;Centro de Salud Tiquipaya Norte;Centro de Salud;1;Urbana;SEDES Pando;Red de Salud Cobija;Pando;Cobija;-10.815.434;-69.456.508;True;True
+EST-PD-0350;Centro Integral de Salud Sacaba Sur;Centro de Salud;1;Periurbana;SEDES Pando;Red de Salud Madre de Dios;Pando;Porvenir;-11.447.829;-68.818.573;True;True
+EST-PD-0351;Posta Sanitaria Quillacollo Centro;Posta de Salud;1;Rural;SEDES Pando;Red de Salud Cobija;Pando;Bolpebra;-11.380.907;-69.238.812;True;True
+EST-PD-0352;Hospital Municipal Temporal;Hospital de 3er Nivel;3;Urbana;SEDES Pando;Red de Salud Madre de Dios;Pando;Bella Flor;-11.771.246;-69.397.159;True;True
+EST-PD-0353;Centro Ambulatorio Alalay;Centro de Salud;1;Urbana;SEDES Pando;Red de Salud Cobija;Pando;Puerto Rico;-1.175.898;-69.125.485;True;True
+EST-PD-0354;Posta de Salud Jaihuayco;Posta de Salud;1;Rural;SEDES Pando;Red de Salud Madre de Dios;Pando;San Lorenzo (Pando);-11.018.141;-68.171.244;True;True
+EST-PD-0355;Posta de Salud Valle Hermoso;Posta de Salud;1;Periurbana;SEDES Pando;Red de Salud Cobija;Pando;El Sena;-11.565.674;-68.946.204;True;True

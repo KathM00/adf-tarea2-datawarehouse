@@ -1,0 +1,26 @@
+﻿vacuna_id;vacuna_nombre;enfermedad_previene;grupo_pai;numero_dosis;dosis_descripcion;edad_aplicacion_descripcion;edad_minima_dias;edad_maxima_dias;intervalo_minimo_dias;via_administracion;sitio_aplicacion;dosis_ml;condicion_especial
+VAC-001;BCG;Formas graves de Tuberculosis (meningitis TB, TB miliar);PAI Regular;1;Dosis única;Recién nacido (primeras 24 horas);0;1825;;Intradérmica;Músculo deltoides brazo derecho;0.1;Peso >= 2000 gramos
+VAC-002;Pentavalente;Difteria, Tétanos, Tos ferina, Hepatitis B, Haemophilus influenzae tipo b;PAI Regular;1;1ra dosis;2 meses;60;1825;;Intramuscular;Tercio medio cara anterolateral externa muslo izquierdo (< 1 año) / Deltoides (> 1 año);0.5;
+VAC-003;Pentavalente;Difteria, Tétanos, Tos ferina, Hepatitis B, Haemophilus influenzae tipo b;PAI Regular;2;2da dosis;4 meses;120;1825;56.0;Intramuscular;Tercio medio cara anterolateral externa muslo izquierdo (< 1 año) / Deltoides (> 1 año);0.5;
+VAC-004;Pentavalente;Difteria, Tétanos, Tos ferina, Hepatitis B, Haemophilus influenzae tipo b;PAI Regular;3;3ra dosis;6 meses;180;1825;56.0;Intramuscular;Tercio medio cara anterolateral externa muslo izquierdo (< 1 año) / Deltoides (> 1 año);0.5;
+VAC-005;Pentavalente;Difteria, Tétanos, Tos ferina, Hepatitis B, Haemophilus influenzae tipo b;PAI Regular;4;4ta dosis (1er refuerzo);18 a 23 meses;540;719;180.0;Intramuscular;Deltoides brazo;0.5;
+VAC-006;Pentavalente;Difteria, Tétanos, Tos ferina, Hepatitis B, Haemophilus influenzae tipo b;PAI Regular;5;5ta dosis (2do refuerzo);4 años;1460;1825;365.0;Intramuscular;Deltoides brazo;0.5;
+VAC-007;Antipolio IPV;Poliomielitis (Parálisis infantil);PAI Regular;1;1ra dosis (IPV inyectable);2 meses;60;1825;;Intramuscular;Tercio medio cara anterolateral externa muslo derecho;0.5;
+VAC-008;Antipolio bOPV;Poliomielitis (Parálisis infantil);PAI Regular;2;2da dosis (OPV oral);4 meses;120;1825;56.0;Oral;Boca (2 gotas);0.1;
+VAC-009;Antipolio bOPV;Poliomielitis (Parálisis infantil);PAI Regular;3;3ra dosis (OPV oral);6 meses;180;1825;56.0;Oral;Boca (2 gotas);0.1;
+VAC-010;Antipolio bOPV;Poliomielitis (Parálisis infantil);PAI Regular;4;4ta dosis (1er refuerzo OPV);18 a 23 meses;540;719;180.0;Oral;Boca (2 gotas);0.1;
+VAC-011;Antipolio bOPV;Poliomielitis (Parálisis infantil);PAI Regular;5;5ta dosis (2do refuerzo OPV);4 años;1460;1825;365.0;Oral;Boca (2 gotas);0.1;
+VAC-012;Antineumocócica;Neumonías y Meningitis neumocócica;PAI Regular;1;1ra dosis;2 meses;60;365;;Intramuscular;Tercio medio cara anterolateral externa muslo derecho;0.5;
+VAC-013;Antineumocócica;Neumonías y Meningitis neumocócica;PAI Regular;2;2da dosis;4 meses;120;365;56.0;Intramuscular;Tercio medio cara anterolateral externa muslo derecho;0.5;
+VAC-014;Antineumocócica;Neumonías y Meningitis neumocócica;PAI Regular;3;3ra dosis;12 meses;365;540;56.0;Intramuscular;Deltoides brazo;0.5;
+VAC-015;Anti-rotavirus;Diarreas severas por Rotavirus;PAI Regular;1;1ra dosis;2 meses;60;105;;Oral;Boca;1.5;Edad máxima 1ra dosis: 3 meses 15 días
+VAC-016;Anti-rotavirus;Diarreas severas por Rotavirus;PAI Regular;2;2da dosis;4 meses;120;240;28.0;Oral;Boca;1.5;Edad máxima 2da dosis: 7 meses 29 días
+VAC-017;Influenza Pediátrica;Influenza estacional;PAI Regular;1;1ra dosis;6 meses;180;365;;Intramuscular;Tercio medio cara anterolateral externa muslo;0.25;
+VAC-018;Influenza Pediátrica;Influenza estacional;PAI Regular;2;2da dosis;7 meses (28 días después de la 1ra);208;365;28.0;Intramuscular;Tercio medio cara anterolateral externa muslo;0.25;
+VAC-019;SRP (Triple Viral);Sarampión, Rubéola, Parotiditis;PAI Regular;1;1ra dosis;12 meses;365;1825;;Subcutánea;Región deltoidea brazo izquierdo;0.5;
+VAC-020;SRP (Triple Viral);Sarampión, Rubéola, Parotiditis;PAI Regular;2;2da dosis (refuerzo);18 a 23 meses;540;1825;28.0;Subcutánea;Región deltoidea brazo izquierdo;0.5;
+VAC-021;Antiamarílica (FA);Fiebre Amarilla;PAI Regular;1;Dosis única;12 meses;365;1825;;Subcutánea;Región deltoidea brazo derecho;0.5;Zona endémica o viajeros a zonas de riesgo
+VAC-022;VPH;Virus del Papiloma Humano (Cáncer de cuello uterino);PAI Regular;1;1ra dosis;10 años (niñas);3650;4380;;Intramuscular;Deltoides brazo;0.5;Solo niñas de 10 años
+VAC-023;VPH;Virus del Papiloma Humano (Cáncer de cuello uterino);PAI Regular;2;2da dosis;6 meses después de la 1ra dosis;3830;4745;180.0;Intramuscular;Deltoides brazo;0.5;Solo niñas
+VAC-024;dT Adulto;Difteria y Tétanos;PAI Regular;1;Refuerzo (cada 10 años) / Embarazadas;Adultos y embarazadas;5475;36500;3650.0;Intramuscular;Deltoides brazo;0.5;Embarazadas: 2 dosis durante gestación
+VAC-025;Influenza Estacional;Influenza estacional;Campaña Estacional;1;Dosis anual;Grupos de riesgo (adultos mayores, personal de salud, embarazadas);180;36500;365.0;Intramuscular;Deltoides brazo;0.5;Campaña anual pre-invierno (abril-mayo)

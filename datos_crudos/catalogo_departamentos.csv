@@ -1,0 +1,111 @@
+﻿municipio_id;municipio_nombre;departamento;codigo_departamento;zona_geografica;es_capital_departamental;poblacion_depto_estimada
+MUN-001;La Paz;La Paz;LP;Altiplano;True;2926996
+MUN-002;El Alto;La Paz;LP;Altiplano;False;2926996
+MUN-003;Viacha;La Paz;LP;Altiplano;False;2926996
+MUN-004;Achacachi;La Paz;LP;Altiplano;False;2926996
+MUN-005;Copacabana;La Paz;LP;Altiplano;False;2926996
+MUN-006;Caranavi;La Paz;LP;Altiplano;False;2926996
+MUN-007;Coroico;La Paz;LP;Altiplano;False;2926996
+MUN-008;Patacamaya;La Paz;LP;Altiplano;False;2926996
+MUN-009;Pucarani;La Paz;LP;Altiplano;False;2926996
+MUN-010;Sorata;La Paz;LP;Altiplano;False;2926996
+MUN-011;Mecapaca;La Paz;LP;Altiplano;False;2926996
+MUN-012;Palca;La Paz;LP;Altiplano;False;2926996
+MUN-013;Sapahaqui;La Paz;LP;Altiplano;False;2926996
+MUN-014;Guanay;La Paz;LP;Altiplano;False;2926996
+MUN-015;Tipuani;La Paz;LP;Altiplano;False;2926996
+MUN-016;Santa Cruz de la Sierra;Santa Cruz;SC;Llano;True;3370059
+MUN-017;Montero;Santa Cruz;SC;Llano;False;3370059
+MUN-018;Warnes;Santa Cruz;SC;Llano;False;3370059
+MUN-019;Cotoca;Santa Cruz;SC;Llano;False;3370059
+MUN-020;La Guardia;Santa Cruz;SC;Llano;False;3370059
+MUN-021;Camiri;Santa Cruz;SC;Llano;False;3370059
+MUN-022;Puerto Suarez;Santa Cruz;SC;Llano;False;3370059
+MUN-023;San Ignacio de Velasco;Santa Cruz;SC;Llano;False;3370059
+MUN-024;Portachuelo;Santa Cruz;SC;Llano;False;3370059
+MUN-025;Yapacaní;Santa Cruz;SC;Llano;False;3370059
+MUN-026;Mineros;Santa Cruz;SC;Llano;False;3370059
+MUN-027;San Julián;Santa Cruz;SC;Llano;False;3370059
+MUN-028;Concepción;Santa Cruz;SC;Llano;False;3370059
+MUN-029;Roboré;Santa Cruz;SC;Llano;False;3370059
+MUN-030;Vallegrande;Santa Cruz;SC;Llano;False;3370059
+MUN-031;Cochabamba;Cochabamba;CB;Valle;True;2028639
+MUN-032;Quillacollo;Cochabamba;CB;Valle;False;2028639
+MUN-033;Sacaba;Cochabamba;CB;Valle;False;2028639
+MUN-034;Tiquipaya;Cochabamba;CB;Valle;False;2028639
+MUN-035;Colcapirhua;Cochabamba;CB;Valle;False;2028639
+MUN-036;Punata;Cochabamba;CB;Valle;False;2028639
+MUN-037;Cliza;Cochabamba;CB;Valle;False;2028639
+MUN-038;Arani;Cochabamba;CB;Valle;False;2028639
+MUN-039;Vinto;Cochabamba;CB;Valle;False;2028639
+MUN-040;Sipe Sipe;Cochabamba;CB;Valle;False;2028639
+MUN-041;Chapare (Villa Tunari);Cochabamba;CB;Valle;False;2028639
+MUN-042;Chimoré;Cochabamba;CB;Valle;False;2028639
+MUN-043;Ivirgarzama;Cochabamba;CB;Valle;False;2028639
+MUN-044;Tarata;Cochabamba;CB;Valle;False;2028639
+MUN-045;Mizque;Cochabamba;CB;Valle;False;2028639
+MUN-046;Potosí;Potosí;PT;Altiplano;True;887509
+MUN-047;Llallagua;Potosí;PT;Altiplano;False;887509
+MUN-048;Villazón;Potosí;PT;Altiplano;False;887509
+MUN-049;Tupiza;Potosí;PT;Altiplano;False;887509
+MUN-050;Uyuni;Potosí;PT;Altiplano;False;887509
+MUN-051;Betanzos;Potosí;PT;Altiplano;False;887509
+MUN-052;Colquechaca;Potosí;PT;Altiplano;False;887509
+MUN-053;Uncía;Potosí;PT;Altiplano;False;887509
+MUN-054;Cotagaita;Potosí;PT;Altiplano;False;887509
+MUN-055;Puna;Potosí;PT;Altiplano;False;887509
+MUN-056;Sacaca;Potosí;PT;Altiplano;False;887509
+MUN-057;Ravelo;Potosí;PT;Altiplano;False;887509
+MUN-058;Tinguipaya;Potosí;PT;Altiplano;False;887509
+MUN-059;Oruro;Oruro;OR;Altiplano;True;538846
+MUN-060;Huanuni;Oruro;OR;Altiplano;False;538846
+MUN-061;Challapata;Oruro;OR;Altiplano;False;538846
+MUN-062;Caracollo;Oruro;OR;Altiplano;False;538846
+MUN-063;Machacamarca;Oruro;OR;Altiplano;False;538846
+MUN-064;Eucaliptus;Oruro;OR;Altiplano;False;538846
+MUN-065;Poopó;Oruro;OR;Altiplano;False;538846
+MUN-066;Antequera;Oruro;OR;Altiplano;False;538846
+MUN-067;Pazña;Oruro;OR;Altiplano;False;538846
+MUN-068;Salinas de Garci Mendoza;Oruro;OR;Altiplano;False;538846
+MUN-069;Chipaya;Oruro;OR;Altiplano;False;538846
+MUN-070;Toledo;Oruro;OR;Altiplano;False;538846
+MUN-071;Sucre;Chuquisaca;CH;Valle;True;637013
+MUN-072;Camargo;Chuquisaca;CH;Valle;False;637013
+MUN-073;Monteagudo;Chuquisaca;CH;Valle;False;637013
+MUN-074;Padilla;Chuquisaca;CH;Valle;False;637013
+MUN-075;Tarabuco;Chuquisaca;CH;Valle;False;637013
+MUN-076;Zudáñez;Chuquisaca;CH;Valle;False;637013
+MUN-077;Mojocoya;Chuquisaca;CH;Valle;False;637013
+MUN-078;Yamparáez;Chuquisaca;CH;Valle;False;637013
+MUN-079;Presto;Chuquisaca;CH;Valle;False;637013
+MUN-080;Villa Serrano;Chuquisaca;CH;Valle;False;637013
+MUN-081;Huacareta;Chuquisaca;CH;Valle;False;637013
+MUN-082;Villa Abecia;Chuquisaca;CH;Valle;False;637013
+MUN-083;Tarija;Tarija;TJ;Valle;True;583335
+MUN-084;Yacuiba;Tarija;TJ;Valle;False;583335
+MUN-085;Bermejo;Tarija;TJ;Valle;False;583335
+MUN-086;Villamontes;Tarija;TJ;Valle;False;583335
+MUN-087;San Lorenzo;Tarija;TJ;Valle;False;583335
+MUN-088;El Puente;Tarija;TJ;Valle;False;583335
+MUN-089;Entre Ríos;Tarija;TJ;Valle;False;583335
+MUN-090;Caraparí;Tarija;TJ;Valle;False;583335
+MUN-091;Uriondo;Tarija;TJ;Valle;False;583335
+MUN-092;Padcaya;Tarija;TJ;Valle;False;583335
+MUN-093;Trinidad;Beni;BN;Llano;True;479264
+MUN-094;Riberalta;Beni;BN;Llano;False;479264
+MUN-095;Guayaramerín;Beni;BN;Llano;False;479264
+MUN-096;San Borja;Beni;BN;Llano;False;479264
+MUN-097;San Ignacio de Moxos;Beni;BN;Llano;False;479264
+MUN-098;Rurrenabaque;Beni;BN;Llano;False;479264
+MUN-099;Santa Ana del Yacuma;Beni;BN;Llano;False;479264
+MUN-100;Reyes;Beni;BN;Llano;False;479264
+MUN-101;San Ramón;Beni;BN;Llano;False;479264
+MUN-102;Magdalena;Beni;BN;Llano;False;479264
+MUN-103;Cobija;Pando;PD;Llano;True;148245
+MUN-104;Porvenir;Pando;PD;Llano;False;148245
+MUN-105;Bolpebra;Pando;PD;Llano;False;148245
+MUN-106;Bella Flor;Pando;PD;Llano;False;148245
+MUN-107;Puerto Rico;Pando;PD;Llano;False;148245
+MUN-108;San Lorenzo (Pando);Pando;PD;Llano;False;148245
+MUN-109;El Sena;Pando;PD;Llano;False;148245
+MUN-110;Santa Rosa del Abuná;Pando;PD;Llano;False;148245
