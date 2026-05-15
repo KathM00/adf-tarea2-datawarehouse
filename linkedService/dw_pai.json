@@ -1,0 +1,17 @@
+{
+	"name": "dw_pai",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "sql-ucb-sisger-pai-kath012026.database.windows.net",
+			"database": "dw_pai",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "adminpai",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEZEQTBERDcyLUZGQTktNDM0RC1BMDY0LThFNzdGMDQyN0E0MV8zNDhmM2FjNS1hZGY0LTQyMWEtODI3OC03ZWUyM2Q5M2Y5NmIiDQp9"
+		}
+	}
+}
