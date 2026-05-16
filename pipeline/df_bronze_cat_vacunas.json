@@ -1,5 +1,5 @@
 {
-	"name": "df_bronze_vacunas_consolidadas",
+	"name": "df_bronze_cat_vacunas",
 	"properties": {
 		"activities": [
 			{
@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "df_vacunacion_consolidada_bronze",
+						"referenceName": "df_cat_vacunas_bronze",
 						"type": "DataFlowReference"
 					},
 					"compute": {
