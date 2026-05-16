@@ -78,5 +78,6 @@
 			"schema": "silver",
 			"table": "cat_vacunas"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

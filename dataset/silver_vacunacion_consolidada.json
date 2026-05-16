@@ -110,5 +110,6 @@
 			"schema": "silver",
 			"table": "vacunacion_consolidada"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

@@ -69,5 +69,6 @@
 			"schema": "silver",
 			"table": "cat_establecimientos"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }
