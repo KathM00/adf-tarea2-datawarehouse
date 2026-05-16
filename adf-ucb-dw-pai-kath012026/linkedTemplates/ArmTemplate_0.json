@@ -1,0 +1,2040 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adf-ucb-dw-pai-kath012026"
+		},
+		"datalake_pai_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'datalake_pai'"
+		},
+		"dw_pai_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'dw_pai'"
+		},
+		"dw_pai_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sql-ucb-sisger-pai-kath012026.database.windows.net"
+		},
+		"dw_pai_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "dw_pai"
+		},
+		"dw_pai_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "adminpai"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/datalake_pai')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('datalake_pai_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dw_pai')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureSqlDatabase",
+				"typeProperties": {
+					"server": "[parameters('dw_pai_properties_typeProperties_server')]",
+					"database": "[parameters('dw_pai_properties_typeProperties_database')]",
+					"encrypt": "mandatory",
+					"trustServerCertificate": false,
+					"authenticationType": "SQL",
+					"userName": "[parameters('dw_pai_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('dw_pai_password')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/catalogo_departamentos_csv')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "datalake_pai",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "bronze"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "catalogo_departamentos.csv",
+						"container": "bronze"
+					},
+					"columnDelimiter": ";",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "municipio_id",
+						"type": "String"
+					},
+					{
+						"name": "municipio_nombre",
+						"type": "String"
+					},
+					{
+						"name": "departamento",
+						"type": "String"
+					},
+					{
+						"name": "codigo_departamento",
+						"type": "String"
+					},
+					{
+						"name": "zona_geografica",
+						"type": "String"
+					},
+					{
+						"name": "es_capital_departamental",
+						"type": "String"
+					},
+					{
+						"name": "poblacion_depto_estimada",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/datalake_pai')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/catalogo_establecimientos_csv')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "datalake_pai",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "bronze"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "catalogo_establecimientos.csv",
+						"container": "bronze"
+					},
+					"columnDelimiter": ";",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "establecimiento_id",
+						"type": "String"
+					},
+					{
+						"name": "nombre_establecimiento",
+						"type": "String"
+					},
+					{
+						"name": "tipo_establecimiento",
+						"type": "String"
+					},
+					{
+						"name": "nivel_atencion",
+						"type": "String"
+					},
+					{
+						"name": "zona",
+						"type": "String"
+					},
+					{
+						"name": "sedes",
+						"type": "String"
+					},
+					{
+						"name": "red_salud",
+						"type": "String"
+					},
+					{
+						"name": "departamento",
+						"type": "String"
+					},
+					{
+						"name": "municipio",
+						"type": "String"
+					},
+					{
+						"name": "latitud",
+						"type": "String"
+					},
+					{
+						"name": "longitud",
+						"type": "String"
+					},
+					{
+						"name": "tiene_cadena_frio",
+						"type": "String"
+					},
+					{
+						"name": "activo",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/datalake_pai')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/catalogo_vacunas_pai_csv')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "datalake_pai",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "bronze"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "catalogo_vacunas_pai.csv",
+						"container": "bronze"
+					},
+					"columnDelimiter": ";",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "vacuna_id",
+						"type": "String"
+					},
+					{
+						"name": "vacuna_nombre",
+						"type": "String"
+					},
+					{
+						"name": "enfermedad_previene",
+						"type": "String"
+					},
+					{
+						"name": "grupo_pai",
+						"type": "String"
+					},
+					{
+						"name": "numero_dosis",
+						"type": "String"
+					},
+					{
+						"name": "dosis_descripcion",
+						"type": "String"
+					},
+					{
+						"name": "edad_aplicacion_descripcion",
+						"type": "String"
+					},
+					{
+						"name": "edad_minima_dias",
+						"type": "String"
+					},
+					{
+						"name": "edad_maxima_dias",
+						"type": "String"
+					},
+					{
+						"name": "intervalo_minimo_dias",
+						"type": "String"
+					},
+					{
+						"name": "via_administracion",
+						"type": "String"
+					},
+					{
+						"name": "sitio_aplicacion",
+						"type": "String"
+					},
+					{
+						"name": "dosis_ml",
+						"type": "String"
+					},
+					{
+						"name": "condicion_especial",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/datalake_pai')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/silver_cat_departamentos')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "dw_pai",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "silver"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [
+					{
+						"name": "municipio_id",
+						"type": "varchar"
+					},
+					{
+						"name": "municipio_nombre",
+						"type": "varchar"
+					},
+					{
+						"name": "departamento",
+						"type": "varchar"
+					},
+					{
+						"name": "codigo_departamento",
+						"type": "varchar"
+					},
+					{
+						"name": "zona_geografica",
+						"type": "varchar"
+					},
+					{
+						"name": "es_capital_departamental",
+						"type": "bit"
+					},
+					{
+						"name": "poblacion_depto_estimada",
+						"type": "int",
+						"precision": 10
+					}
+				],
+				"typeProperties": {
+					"schema": "silver",
+					"table": "cat_departamentos"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/dw_pai')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/silver_cat_establecimientos')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "dw_pai",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "silver"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [
+					{
+						"name": "establecimiento_id",
+						"type": "varchar"
+					},
+					{
+						"name": "nombre_establecimiento",
+						"type": "varchar"
+					},
+					{
+						"name": "tipo_establecimiento",
+						"type": "varchar"
+					},
+					{
+						"name": "nivel_atencion",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "zona",
+						"type": "varchar"
+					},
+					{
+						"name": "sedes",
+						"type": "varchar"
+					},
+					{
+						"name": "red_salud",
+						"type": "varchar"
+					},
+					{
+						"name": "departamento",
+						"type": "varchar"
+					},
+					{
+						"name": "municipio",
+						"type": "varchar"
+					},
+					{
+						"name": "latitud",
+						"type": "varchar"
+					},
+					{
+						"name": "longitud",
+						"type": "varchar"
+					},
+					{
+						"name": "tiene_cadena_frio",
+						"type": "bit"
+					},
+					{
+						"name": "activo",
+						"type": "bit"
+					}
+				],
+				"typeProperties": {
+					"schema": "silver",
+					"table": "cat_establecimientos"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/dw_pai')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/silver_cat_vacunas')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "dw_pai",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "silver"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [
+					{
+						"name": "vacuna_id",
+						"type": "varchar"
+					},
+					{
+						"name": "vacuna_nombre",
+						"type": "varchar"
+					},
+					{
+						"name": "enfermedad_previene",
+						"type": "varchar"
+					},
+					{
+						"name": "grupo_pai",
+						"type": "varchar"
+					},
+					{
+						"name": "numero_dosis",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "dosis_descripcion",
+						"type": "varchar"
+					},
+					{
+						"name": "edad_aplicacion_descripcion",
+						"type": "varchar"
+					},
+					{
+						"name": "edad_minima_dias",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "edad_maxima_dias",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "intervalo_minimo_dias",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "via_administracion",
+						"type": "varchar"
+					},
+					{
+						"name": "sitio_aplicacion",
+						"type": "varchar"
+					},
+					{
+						"name": "dosis_ml",
+						"type": "decimal",
+						"precision": 5,
+						"scale": 2
+					},
+					{
+						"name": "condicion_especial",
+						"type": "varchar"
+					}
+				],
+				"typeProperties": {
+					"schema": "silver",
+					"table": "cat_vacunas"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/dw_pai')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/silver_vacunacion_consolidada')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "dw_pai",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "silver"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [
+					{
+						"name": "registro_id",
+						"type": "varchar"
+					},
+					{
+						"name": "fuente_origen",
+						"type": "varchar"
+					},
+					{
+						"name": "paciente_id",
+						"type": "varchar"
+					},
+					{
+						"name": "documento_numero",
+						"type": "varchar"
+					},
+					{
+						"name": "documento_expedido",
+						"type": "varchar"
+					},
+					{
+						"name": "nombre_paciente",
+						"type": "varchar"
+					},
+					{
+						"name": "apellido_paterno",
+						"type": "varchar"
+					},
+					{
+						"name": "apellido_materno",
+						"type": "varchar"
+					},
+					{
+						"name": "sexo",
+						"type": "char"
+					},
+					{
+						"name": "fecha_nacimiento",
+						"type": "date"
+					},
+					{
+						"name": "municipio_residencia",
+						"type": "varchar"
+					},
+					{
+						"name": "comunidad_indigena",
+						"type": "bit"
+					},
+					{
+						"name": "fecha_vacunacion",
+						"type": "date"
+					},
+					{
+						"name": "vacuna_id",
+						"type": "varchar"
+					},
+					{
+						"name": "numero_dosis",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "establecimiento_id",
+						"type": "varchar"
+					},
+					{
+						"name": "lote_vacuna",
+						"type": "varchar"
+					},
+					{
+						"name": "temperatura_conservacion",
+						"type": "decimal",
+						"precision": 5,
+						"scale": 2
+					},
+					{
+						"name": "edad_dias_aplicacion",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "aplicacion_oportuna",
+						"type": "bit"
+					},
+					{
+						"name": "via_administracion",
+						"type": "varchar"
+					},
+					{
+						"name": "fecha_carga",
+						"type": "datetime",
+						"precision": 23,
+						"scale": 3
+					}
+				],
+				"typeProperties": {
+					"schema": "silver",
+					"table": "vacunacion_consolidada"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/dw_pai')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/vacunacion_la_paz_csv')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "datalake_pai",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "bronze"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "vacunacion_la_paz.csv",
+						"container": "bronze"
+					},
+					"columnDelimiter": ";",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "id_registro",
+						"type": "String"
+					},
+					{
+						"name": "cod_paciente",
+						"type": "String"
+					},
+					{
+						"name": "documento_identidad",
+						"type": "String"
+					},
+					{
+						"name": "nombres",
+						"type": "String"
+					},
+					{
+						"name": "primer_apellido",
+						"type": "String"
+					},
+					{
+						"name": "segundo_apellido",
+						"type": "String"
+					},
+					{
+						"name": "genero",
+						"type": "String"
+					},
+					{
+						"name": "fec_nacimiento",
+						"type": "String"
+					},
+					{
+						"name": "municipio",
+						"type": "String"
+					},
+					{
+						"name": "pueblo_indigena",
+						"type": "String"
+					},
+					{
+						"name": "fec_vacunacion",
+						"type": "String"
+					},
+					{
+						"name": "cod_vacuna",
+						"type": "String"
+					},
+					{
+						"name": "desc_vacuna",
+						"type": "String"
+					},
+					{
+						"name": "nro_dosis",
+						"type": "String"
+					},
+					{
+						"name": "cod_establecimiento",
+						"type": "String"
+					},
+					{
+						"name": "desc_establecimiento",
+						"type": "String"
+					},
+					{
+						"name": "depto",
+						"type": "String"
+					},
+					{
+						"name": "nro_lote",
+						"type": "String"
+					},
+					{
+						"name": "temp_conservacion",
+						"type": "String"
+					},
+					{
+						"name": "edad_dias",
+						"type": "String"
+					},
+					{
+						"name": "via_aplicacion",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/datalake_pai')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/vacunacion_rural_movil_csv')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "datalake_pai",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "bronze"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "vacunacion_rural_movil.csv",
+						"container": "bronze"
+					},
+					"columnDelimiter": ";",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "record_id",
+						"type": "String"
+					},
+					{
+						"name": "sync_timestamp",
+						"type": "String"
+					},
+					{
+						"name": "device_id",
+						"type": "String"
+					},
+					{
+						"name": "patient_id",
+						"type": "String"
+					},
+					{
+						"name": "patient_ci",
+						"type": "String"
+					},
+					{
+						"name": "patient_name",
+						"type": "String"
+					},
+					{
+						"name": "patient_last_name_1",
+						"type": "String"
+					},
+					{
+						"name": "patient_last_name_2",
+						"type": "String"
+					},
+					{
+						"name": "patient_sex",
+						"type": "String"
+					},
+					{
+						"name": "patient_birth_date",
+						"type": "String"
+					},
+					{
+						"name": "patient_department",
+						"type": "String"
+					},
+					{
+						"name": "patient_municipality",
+						"type": "String"
+					},
+					{
+						"name": "patient_community",
+						"type": "String"
+					},
+					{
+						"name": "patient_indigenous",
+						"type": "String"
+					},
+					{
+						"name": "vaccination_date",
+						"type": "String"
+					},
+					{
+						"name": "vaccine_code",
+						"type": "String"
+					},
+					{
+						"name": "vaccine_name",
+						"type": "String"
+					},
+					{
+						"name": "dose_number",
+						"type": "String"
+					},
+					{
+						"name": "facility_code",
+						"type": "String"
+					},
+					{
+						"name": "facility_name",
+						"type": "String"
+					},
+					{
+						"name": "lot_number",
+						"type": "String"
+					},
+					{
+						"name": "storage_temp_celsius",
+						"type": "String"
+					},
+					{
+						"name": "patient_age_days",
+						"type": "String"
+					},
+					{
+						"name": "administration_route",
+						"type": "String"
+					},
+					{
+						"name": "gps_latitude",
+						"type": "String"
+					},
+					{
+						"name": "gps_longitude",
+						"type": "String"
+					},
+					{
+						"name": "gps_accuracy_meters",
+						"type": "String"
+					},
+					{
+						"name": "observations",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/datalake_pai')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/vacunacion_santa_cruz_csv')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "datalake_pai",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "bronze"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "vacunacion_santa_cruz.csv",
+						"container": "bronze"
+					},
+					"columnDelimiter": ";",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "registro_id",
+						"type": "String"
+					},
+					{
+						"name": "paciente_id",
+						"type": "String"
+					},
+					{
+						"name": "ci_paciente",
+						"type": "String"
+					},
+					{
+						"name": "nombre_paciente",
+						"type": "String"
+					},
+					{
+						"name": "apellido_paterno",
+						"type": "String"
+					},
+					{
+						"name": "apellido_materno",
+						"type": "String"
+					},
+					{
+						"name": "sexo",
+						"type": "String"
+					},
+					{
+						"name": "fecha_nacimiento",
+						"type": "String"
+					},
+					{
+						"name": "municipio_residencia",
+						"type": "String"
+					},
+					{
+						"name": "comunidad_indigena",
+						"type": "String"
+					},
+					{
+						"name": "fecha_vacunacion",
+						"type": "String"
+					},
+					{
+						"name": "vacuna_id",
+						"type": "String"
+					},
+					{
+						"name": "vacuna_nombre",
+						"type": "String"
+					},
+					{
+						"name": "numero_dosis",
+						"type": "String"
+					},
+					{
+						"name": "establecimiento_id",
+						"type": "String"
+					},
+					{
+						"name": "nombre_establecimiento",
+						"type": "String"
+					},
+					{
+						"name": "departamento",
+						"type": "String"
+					},
+					{
+						"name": "lote_vacuna",
+						"type": "String"
+					},
+					{
+						"name": "temperatura_conservacion",
+						"type": "String"
+					},
+					{
+						"name": "edad_dias_aplicacion",
+						"type": "String"
+					},
+					{
+						"name": "aplicacion_oportuna",
+						"type": "String"
+					},
+					{
+						"name": "via_administracion",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/datalake_pai')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/df_cat_departamentos_bronze')]",
+			"type": "Microsoft.DataFactory/factories/dataflows",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"folder": {
+					"name": "bronze"
+				},
+				"type": "MappingDataFlow",
+				"typeProperties": {
+					"sources": [
+						{
+							"dataset": {
+								"referenceName": "catalogo_departamentos_csv",
+								"type": "DatasetReference"
+							},
+							"name": "source1"
+						}
+					],
+					"sinks": [
+						{
+							"dataset": {
+								"referenceName": "silver_cat_departamentos",
+								"type": "DatasetReference"
+							},
+							"name": "sink1"
+						}
+					],
+					"transformations": [
+						{
+							"name": "derivedColumn1"
+						},
+						{
+							"name": "derivedColumn2"
+						},
+						{
+							"name": "derivedColumn3"
+						},
+						{
+							"name": "derivedColumn4"
+						},
+						{
+							"name": "derivedColumn5"
+						},
+						{
+							"name": "derivedColumn6"
+						}
+					],
+					"scriptLines": [
+						"source(output(",
+						"          municipio_id as string,",
+						"          municipio_nombre as string,",
+						"          departamento as string,",
+						"          codigo_departamento as string,",
+						"          zona_geografica as string,",
+						"          es_capital_departamental as string,",
+						"          poblacion_depto_estimada as string",
+						"     ),",
+						"     allowSchemaDrift: true,",
+						"     validateSchema: false,",
+						"     ignoreNoFilesFound: false) ~> source1",
+						"source1 derive(municipio_id = trim(municipio_id)) ~> derivedColumn1",
+						"derivedColumn1 derive(municipio_nombre = initCap(regexReplace(municipio_nombre, '\\\\s+', ' '))) ~> derivedColumn2",
+						"derivedColumn2 derive(departamento = initCap(regexReplace(departamento, '\\\\s+', ' '))) ~> derivedColumn3",
+						"derivedColumn3 derive(codigo_departamento = upper(trim(codigo_departamento))) ~> derivedColumn4",
+						"derivedColumn4 derive(es_capital_departamental = iif(in(['si', 'true', '1', 'yes'], lower(trim(toString(es_capital_departamental)))), true(), false())) ~> derivedColumn5",
+						"derivedColumn5 derive(poblacion_depto_estimada = toInteger(regexReplace(toString(poblacion_depto_estimada), '[^0-9]', ''))) ~> derivedColumn6",
+						"derivedColumn6 sink(allowSchemaDrift: true,",
+						"     validateSchema: false,",
+						"     input(",
+						"          municipio_id as string,",
+						"          municipio_nombre as string,",
+						"          departamento as string,",
+						"          codigo_departamento as string,",
+						"          zona_geografica as string,",
+						"          es_capital_departamental as boolean,",
+						"          poblacion_depto_estimada as integer",
+						"     ),",
+						"     deletable:false,",
+						"     insertable:true,",
+						"     updateable:false,",
+						"     upsertable:false,",
+						"     format: 'table',",
+						"     skipDuplicateMapInputs: true,",
+						"     skipDuplicateMapOutputs: true,",
+						"     errorHandlingOption: 'stopOnFirstError',",
+						"     mapColumn(",
+						"          municipio_id,",
+						"          municipio_nombre,",
+						"          departamento,",
+						"          codigo_departamento,",
+						"          zona_geografica,",
+						"          es_capital_departamental,",
+						"          poblacion_depto_estimada",
+						"     )) ~> sink1"
+					]
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/catalogo_departamentos_csv')]",
+				"[concat(variables('factoryId'), '/datasets/silver_cat_departamentos')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/df_cat_establecimientos_bronze')]",
+			"type": "Microsoft.DataFactory/factories/dataflows",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"folder": {
+					"name": "bronze"
+				},
+				"type": "MappingDataFlow",
+				"typeProperties": {
+					"sources": [
+						{
+							"dataset": {
+								"referenceName": "catalogo_establecimientos_csv",
+								"type": "DatasetReference"
+							},
+							"name": "source1"
+						}
+					],
+					"sinks": [
+						{
+							"dataset": {
+								"referenceName": "silver_cat_establecimientos",
+								"type": "DatasetReference"
+							},
+							"name": "sink1"
+						}
+					],
+					"transformations": [
+						{
+							"name": "derivedColumn1"
+						},
+						{
+							"name": "derivedColumn2"
+						},
+						{
+							"name": "derivedColumn3"
+						},
+						{
+							"name": "derivedColumn5"
+						},
+						{
+							"name": "derivedColumn6"
+						},
+						{
+							"name": "derivedColumn8"
+						},
+						{
+							"name": "derivedColumn9"
+						}
+					],
+					"scriptLines": [
+						"source(output(",
+						"          establecimiento_id as string,",
+						"          nombre_establecimiento as string,",
+						"          tipo_establecimiento as string,",
+						"          nivel_atencion as string,",
+						"          zona as string,",
+						"          sedes as string,",
+						"          red_salud as string,",
+						"          departamento as string,",
+						"          municipio as string,",
+						"          latitud as string,",
+						"          longitud as string,",
+						"          tiene_cadena_frio as string,",
+						"          activo as string",
+						"     ),",
+						"     allowSchemaDrift: true,",
+						"     validateSchema: false,",
+						"     ignoreNoFilesFound: false) ~> source1",
+						"source1 derive(establecimiento_id = trim(establecimiento_id)) ~> derivedColumn1",
+						"derivedColumn1 derive(nombre_establecimiento = initCap(trim(regexReplace(regexReplace(nombre_establecimiento, '[()]', ''), '\\\\s+', ' '))),",
+						"          municipio = initCap(regexReplace(municipio, '\\\\s+', ' '))) ~> derivedColumn2",
+						"derivedColumn2 derive(tipo_establecimiento = replace(replace(initCap(trim(tipo_establecimiento)), '3Er', '3er'), '2Do', '2do')) ~> derivedColumn3",
+						"derivedColumn3 derive(sedes = replace(initCap(trim(sedes)), 'Sedes', 'Sede')) ~> derivedColumn5",
+						"derivedColumn5 derive(red_salud = trim(regexReplace(initCap(regexReplace(red_salud, '\\\\s+', ' ')), '^Red De Salud\\\\s*', ''))) ~> derivedColumn6",
+						"derivedColumn6 derive(tiene_cadena_frio = iif(in(['si', 'true', '1', 'yes'], lower(trim(toString(tiene_cadena_frio)))), true(), false()),",
+						"          activo = iif(in(['si', 'true', '1', 'yes'], lower(trim(toString(activo)))), true(), false())) ~> derivedColumn8",
+						"derivedColumn8 derive(nivel_atencion = toInteger(nivel_atencion)) ~> derivedColumn9",
+						"derivedColumn9 sink(allowSchemaDrift: true,",
+						"     validateSchema: false,",
+						"     input(",
+						"          establecimiento_id as string,",
+						"          nombre_establecimiento as string,",
+						"          tipo_establecimiento as string,",
+						"          nivel_atencion as integer,",
+						"          zona as string,",
+						"          sedes as string,",
+						"          red_salud as string,",
+						"          departamento as string,",
+						"          municipio as string,",
+						"          latitud as string,",
+						"          longitud as string,",
+						"          tiene_cadena_frio as boolean,",
+						"          activo as boolean",
+						"     ),",
+						"     deletable:false,",
+						"     insertable:true,",
+						"     updateable:false,",
+						"     upsertable:false,",
+						"     format: 'table',",
+						"     skipDuplicateMapInputs: true,",
+						"     skipDuplicateMapOutputs: true,",
+						"     errorHandlingOption: 'stopOnFirstError',",
+						"     mapColumn(",
+						"          establecimiento_id,",
+						"          nombre_establecimiento,",
+						"          tipo_establecimiento,",
+						"          nivel_atencion,",
+						"          zona,",
+						"          sedes,",
+						"          red_salud,",
+						"          departamento,",
+						"          municipio,",
+						"          latitud,",
+						"          longitud,",
+						"          tiene_cadena_frio,",
+						"          activo",
+						"     )) ~> sink1"
+					]
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/catalogo_establecimientos_csv')]",
+				"[concat(variables('factoryId'), '/datasets/silver_cat_establecimientos')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/df_cat_vacunas_bronze')]",
+			"type": "Microsoft.DataFactory/factories/dataflows",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"folder": {
+					"name": "bronze"
+				},
+				"type": "MappingDataFlow",
+				"typeProperties": {
+					"sources": [
+						{
+							"dataset": {
+								"referenceName": "catalogo_vacunas_pai_csv",
+								"type": "DatasetReference"
+							},
+							"name": "source1"
+						}
+					],
+					"sinks": [
+						{
+							"dataset": {
+								"referenceName": "silver_cat_vacunas",
+								"type": "DatasetReference"
+							},
+							"name": "sink1"
+						}
+					],
+					"transformations": [
+						{
+							"name": "derivedColumn1"
+						},
+						{
+							"name": "derivedColumn2"
+						},
+						{
+							"name": "derivedColumn3"
+						}
+					],
+					"scriptLines": [
+						"source(output(",
+						"          vacuna_id as string,",
+						"          vacuna_nombre as string,",
+						"          enfermedad_previene as string,",
+						"          grupo_pai as string,",
+						"          numero_dosis as string,",
+						"          dosis_descripcion as string,",
+						"          edad_aplicacion_descripcion as string,",
+						"          edad_minima_dias as string,",
+						"          edad_maxima_dias as string,",
+						"          intervalo_minimo_dias as string,",
+						"          via_administracion as string,",
+						"          sitio_aplicacion as string,",
+						"          dosis_ml as string,",
+						"          condicion_especial as string",
+						"     ),",
+						"     allowSchemaDrift: true,",
+						"     validateSchema: false,",
+						"     ignoreNoFilesFound: false) ~> source1",
+						"source1 derive(vacuna_nombre = trim(vacuna_nombre),",
+						"          vacuna_id = trim(vacuna_id),",
+						"          enfermedad_previene = trim(enfermedad_previene),",
+						"          via_administracion = trim(via_administracion),",
+						"          condicion_especial = trim(condicion_especial),",
+						"          sitio_aplicacion = trim(sitio_aplicacion)) ~> derivedColumn1",
+						"derivedColumn1 derive(numero_dosis = toInteger(numero_dosis),",
+						"          edad_minima_dias = toInteger(numero_dosis),",
+						"          edad_maxima_dias = iif(isNull(edad_maxima_dias) || edad_maxima_dias == '', toInteger(0), toInteger(edad_maxima_dias))) ~> derivedColumn2",
+						"derivedColumn2 derive(intervalo_minimo_dias = iif(isNull(intervalo_minimo_dias) || intervalo_minimo_dias == '', toInteger(0), toInteger(toFloat(intervalo_minimo_dias))),",
+						"          dosis_ml = toDecimal(dosis_ml, 5, 2),",
+						"          condicion_especial = iif(isNull(condicion_especial) || trim(condicion_especial) == '', 'No aplica', trim(condicion_especial))) ~> derivedColumn3",
+						"derivedColumn3 sink(allowSchemaDrift: true,",
+						"     validateSchema: false,",
+						"     input(",
+						"          vacuna_id as string,",
+						"          vacuna_nombre as string,",
+						"          enfermedad_previene as string,",
+						"          grupo_pai as string,",
+						"          numero_dosis as integer,",
+						"          dosis_descripcion as string,",
+						"          edad_aplicacion_descripcion as string,",
+						"          edad_minima_dias as integer,",
+						"          edad_maxima_dias as integer,",
+						"          intervalo_minimo_dias as integer,",
+						"          via_administracion as string,",
+						"          sitio_aplicacion as string,",
+						"          dosis_ml as decimal(5,2),",
+						"          condicion_especial as string",
+						"     ),",
+						"     deletable:false,",
+						"     insertable:true,",
+						"     updateable:false,",
+						"     upsertable:false,",
+						"     format: 'table',",
+						"     preSQLs:['DELETE FROM silver.cat_vacunas;'],",
+						"     skipDuplicateMapInputs: true,",
+						"     skipDuplicateMapOutputs: true,",
+						"     errorHandlingOption: 'stopOnFirstError',",
+						"     mapColumn(",
+						"          vacuna_id,",
+						"          vacuna_nombre,",
+						"          enfermedad_previene,",
+						"          grupo_pai,",
+						"          numero_dosis,",
+						"          dosis_descripcion,",
+						"          edad_aplicacion_descripcion,",
+						"          edad_minima_dias,",
+						"          edad_maxima_dias,",
+						"          intervalo_minimo_dias,",
+						"          via_administracion,",
+						"          sitio_aplicacion,",
+						"          dosis_ml,",
+						"          condicion_especial",
+						"     )) ~> sink1"
+					]
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/catalogo_vacunas_pai_csv')]",
+				"[concat(variables('factoryId'), '/datasets/silver_cat_vacunas')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/df_vacunacion_consolidada_bronze')]",
+			"type": "Microsoft.DataFactory/factories/dataflows",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"folder": {
+					"name": "bronze"
+				},
+				"type": "MappingDataFlow",
+				"typeProperties": {
+					"sources": [
+						{
+							"dataset": {
+								"referenceName": "vacunacion_la_paz_csv",
+								"type": "DatasetReference"
+							},
+							"name": "source1"
+						},
+						{
+							"dataset": {
+								"referenceName": "vacunacion_rural_movil_csv",
+								"type": "DatasetReference"
+							},
+							"name": "source2"
+						},
+						{
+							"dataset": {
+								"referenceName": "vacunacion_santa_cruz_csv",
+								"type": "DatasetReference"
+							},
+							"name": "source3"
+						},
+						{
+							"dataset": {
+								"referenceName": "silver_cat_vacunas",
+								"type": "DatasetReference"
+							},
+							"name": "source4"
+						}
+					],
+					"sinks": [
+						{
+							"dataset": {
+								"referenceName": "silver_vacunacion_consolidada",
+								"type": "DatasetReference"
+							},
+							"name": "sink1"
+						}
+					],
+					"transformations": [
+						{
+							"name": "derivedColumn1"
+						},
+						{
+							"name": "select1"
+						},
+						{
+							"name": "derivedColumn2"
+						},
+						{
+							"name": "derivedColumn3"
+						},
+						{
+							"name": "derivedColumn4"
+						},
+						{
+							"name": "join1"
+						},
+						{
+							"name": "derivedColumn5"
+						},
+						{
+							"name": "select2"
+						},
+						{
+							"name": "derivedColumn6"
+						},
+						{
+							"name": "derivedColumn7"
+						},
+						{
+							"name": "derivedColumn8"
+						},
+						{
+							"name": "derivedColumn9"
+						},
+						{
+							"name": "derivedColumn10"
+						},
+						{
+							"name": "join2"
+						},
+						{
+							"name": "derivedColumn11"
+						},
+						{
+							"name": "select3"
+						},
+						{
+							"name": "select4"
+						},
+						{
+							"name": "derivedColumn12"
+						},
+						{
+							"name": "derivedColumn13"
+						},
+						{
+							"name": "select5"
+						},
+						{
+							"name": "union1"
+						},
+						{
+							"name": "union2"
+						}
+					],
+					"scriptLines": [
+						"source(output(",
+						"          id_registro as string,",
+						"          cod_paciente as string,",
+						"          documento_identidad as string,",
+						"          nombres as string,",
+						"          primer_apellido as string,",
+						"          segundo_apellido as string,",
+						"          genero as string,",
+						"          fec_nacimiento as string,",
+						"          municipio as string,",
+						"          pueblo_indigena as string,",
+						"          fec_vacunacion as string,",
+						"          cod_vacuna as string,",
+						"          desc_vacuna as string,",
+						"          nro_dosis as string,",
+						"          cod_establecimiento as string,",
+						"          desc_establecimiento as string,",
+						"          depto as string,",
+						"          nro_lote as string,",
+						"          temp_conservacion as string,",
+						"          edad_dias as string,",
+						"          via_aplicacion as string",
+						"     ),",
+						"     allowSchemaDrift: true,",
+						"     validateSchema: false,",
+						"     ignoreNoFilesFound: false) ~> source1",
+						"source(output(",
+						"          record_id as string,",
+						"          sync_timestamp as string,",
+						"          device_id as string,",
+						"          patient_id as string,",
+						"          patient_ci as string,",
+						"          patient_name as string,",
+						"          patient_last_name_1 as string,",
+						"          patient_last_name_2 as string,",
+						"          patient_sex as string,",
+						"          patient_birth_date as string,",
+						"          patient_department as string,",
+						"          patient_municipality as string,",
+						"          patient_community as string,",
+						"          patient_indigenous as string,",
+						"          vaccination_date as string,",
+						"          vaccine_code as string,",
+						"          vaccine_name as string,",
+						"          dose_number as string,",
+						"          facility_code as string,",
+						"          facility_name as string,",
+						"          lot_number as string,",
+						"          storage_temp_celsius as string,",
+						"          patient_age_days as string,",
+						"          administration_route as string,",
+						"          gps_latitude as string,",
+						"          gps_longitude as string,",
+						"          gps_accuracy_meters as string,",
+						"          observations as string",
+						"     ),",
+						"     allowSchemaDrift: true,",
+						"     validateSchema: false,",
+						"     ignoreNoFilesFound: false) ~> source2",
+						"source(output(",
+						"          registro_id as string,",
+						"          paciente_id as string,",
+						"          ci_paciente as string,",
+						"          nombre_paciente as string,",
+						"          apellido_paterno as string,",
+						"          apellido_materno as string,",
+						"          sexo as string,",
+						"          fecha_nacimiento as string,",
+						"          municipio_residencia as string,",
+						"          comunidad_indigena as string,",
+						"          fecha_vacunacion as string,",
+						"          vacuna_id as string,",
+						"          vacuna_nombre as string,",
+						"          numero_dosis as string,",
+						"          establecimiento_id as string,",
+						"          nombre_establecimiento as string,",
+						"          departamento as string,",
+						"          lote_vacuna as string,",
+						"          temperatura_conservacion as string,",
+						"          edad_dias_aplicacion as string,",
+						"          aplicacion_oportuna as string,",
+						"          via_administracion as string",
+						"     ),",
+						"     allowSchemaDrift: true,",
+						"     validateSchema: false,",
+						"     ignoreNoFilesFound: false) ~> source3",
+						"source(output(",
+						"          vacuna_id as string,",
+						"          vacuna_nombre as string,",
+						"          enfermedad_previene as string,",
+						"          grupo_pai as string,",
+						"          numero_dosis as integer,",
+						"          dosis_descripcion as string,",
+						"          edad_aplicacion_descripcion as string,",
+						"          edad_minima_dias as integer,",
+						"          edad_maxima_dias as integer,",
+						"          intervalo_minimo_dias as integer,",
+						"          via_administracion as string,",
+						"          sitio_aplicacion as string,",
+						"          dosis_ml as decimal(5,2),",
+						"          condicion_especial as string",
+						"     ),",
+						"     allowSchemaDrift: true,",
+						"     validateSchema: false,",
+						"     isolationLevel: 'READ_UNCOMMITTED',",
+						"     format: 'table') ~> source4",
+						"select1 derive(fuente_origen = \"La Paz\",",
+						"          nombre_paciente = trim(nombres),",
+						"          apellido_paterno = trim(primer_apellido),",
+						"          apellido_materno = iif(isNull(segundo_apellido) || segundo_apellido == '', toString(null()), trim(segundo_apellido)),",
+						"          sexo = iif(genero == 'Masculino', 'M', 'F'),",
+						"          comunidad_indigena = iif(pueblo_indigena == 'Sí', true(), false())) ~> derivedColumn1",
+						"source1 select(mapColumn(",
+						"          registro_id = id_registro,",
+						"          paciente_id = cod_paciente,",
+						"          documento_identidad,",
+						"          nombres,",
+						"          primer_apellido,",
+						"          segundo_apellido,",
+						"          genero,",
+						"          fec_nacimiento,",
+						"          municipio_residencia = municipio,",
+						"          pueblo_indigena,",
+						"          fec_vacunacion,",
+						"          vacuna_id = cod_vacuna,",
+						"          desc_vacuna,",
+						"          nro_dosis,",
+						"          establecimiento_id = cod_establecimiento,",
+						"          desc_establecimiento,",
+						"          depto,",
+						"          lote_vacuna = nro_lote,",
+						"          temp_conservacion,",
+						"          edad_dias,",
+						"          via_administracion = via_aplicacion",
+						"     ),",
+						"     skipDuplicateMapInputs: true,",
+						"     skipDuplicateMapOutputs: true) ~> select1",
+						"derivedColumn1 derive(documento_numero = split(documento_identidad, ' ')[1],",
+						"          documento_expedido = split(documento_identidad, ' ')[2]) ~> derivedColumn2",
+						"derivedColumn2 derive(fecha_nacimiento = toDate(fec_nacimiento, 'd/M/yyyy'),",
+						"          fecha_vacunacion = toDate(fec_vacunacion, 'd/M/yyyy')) ~> derivedColumn3",
+						"derivedColumn3 derive(numero_dosis = toInteger(nro_dosis),",
+						"          temperatura_conservacion = toDecimal(temp_conservacion, 5, 2),",
+						"          edad_dias_aplicacion = toInteger(edad_dias),",
+						"          fecha_carga = currentTimestamp()) ~> derivedColumn4",
+						"derivedColumn4, source4 join(select1@vacuna_id == source4@vacuna_id,",
+						"     joinType:'left',",
+						"     matchType:'exact',",
+						"     ignoreSpaces: false,",
+						"     broadcast: 'auto')~> join1",
+						"join1 derive(aplicacion_oportuna = iif(edad_dias_aplicacion <= toInteger(edad_maxima_dias), true(), false())) ~> derivedColumn5",
+						"derivedColumn5 select(mapColumn(",
+						"          registro_id,",
+						"          paciente_id,",
+						"          municipio_residencia,",
+						"          vacuna_id = select1@vacuna_id,",
+						"          establecimiento_id,",
+						"          lote_vacuna,",
+						"          via_administracion = select1@via_administracion,",
+						"          fuente_origen,",
+						"          nombre_paciente,",
+						"          apellido_paterno,",
+						"          apellido_materno,",
+						"          sexo,",
+						"          comunidad_indigena,",
+						"          documento_numero,",
+						"          documento_expedido,",
+						"          fecha_nacimiento,",
+						"          fecha_vacunacion,",
+						"          numero_dosis = derivedColumn4@numero_dosis,",
+						"          temperatura_conservacion,",
+						"          edad_dias_aplicacion,",
+						"          fecha_carga,",
+						"          aplicacion_oportuna",
+						"     ),",
+						"     skipDuplicateMapInputs: true,",
+						"     skipDuplicateMapOutputs: true) ~> select2",
+						"source2 derive(registro_id = record_id,",
+						"          fuente_origen = 'Rural Movil',",
+						"          paciente_id = patient_id) ~> derivedColumn6",
+						"derivedColumn6 derive(documento_numero = split(patient_ci, ' ')[1],",
+						"          documento_expedido = split(patient_ci, ' ')[2]) ~> derivedColumn7",
+						"derivedColumn7 derive(nombre_paciente = trim(patient_name),",
+						"          apellido_paterno = trim(patient_last_name_1),",
+						"          apellido_materno = iif(isNull(patient_last_name_2) || patient_last_name_2 == '', toString(null()), trim(patient_last_name_2)),",
+						"          sexo = patient_sex,",
+						"          municipio_residencia = trim(patient_municipality),",
+						"          comunidad_indigena = toBoolean(patient_indigenous)) ~> derivedColumn8",
+						"derivedColumn8 derive(fecha_nacimiento = toDate(patient_birth_date, 'd/M/yyyy'),",
+						"          fecha_vacunacion = toDate(vaccination_date, 'yyyy-MM-dd\\'T\\'HH:mm:ss')) ~> derivedColumn9",
+						"derivedColumn9 derive(vacuna_id = vaccine_code,",
+						"          numero_dosis = toInteger(toFloat(dose_number)),",
+						"          establecimiento_id = facility_code,",
+						"          lote_vacuna = lot_number,",
+						"          temperatura_conservacion = toDecimal(storage_temp_celsius, 5, 2),",
+						"          edad_dias_aplicacion = toInteger(patient_age_days),",
+						"          via_administracion = administration_route,",
+						"          fecha_carga = currentTimestamp()) ~> derivedColumn10",
+						"derivedColumn10, source4 join(derivedColumn10@vacuna_id == source4@vacuna_id,",
+						"     joinType:'left',",
+						"     matchType:'exact',",
+						"     ignoreSpaces: false,",
+						"     broadcast: 'auto')~> join2",
+						"join2 derive(aplicacion_oportuna = iif(edad_dias_aplicacion <= toInteger(edad_maxima_dias), true(), false())) ~> derivedColumn11",
+						"derivedColumn11 select(mapColumn(",
+						"          registro_id,",
+						"          fuente_origen,",
+						"          paciente_id,",
+						"          documento_numero,",
+						"          documento_expedido,",
+						"          nombre_paciente,",
+						"          apellido_paterno,",
+						"          apellido_materno,",
+						"          sexo,",
+						"          municipio_residencia,",
+						"          comunidad_indigena,",
+						"          fecha_nacimiento,",
+						"          fecha_vacunacion,",
+						"          vacuna_id = derivedColumn10@vacuna_id,",
+						"          numero_dosis = derivedColumn10@numero_dosis,",
+						"          establecimiento_id,",
+						"          lote_vacuna,",
+						"          temperatura_conservacion,",
+						"          edad_dias_aplicacion,",
+						"          via_administracion = derivedColumn10@via_administracion,",
+						"          fecha_carga,",
+						"          aplicacion_oportuna",
+						"     ),",
+						"     skipDuplicateMapInputs: true,",
+						"     skipDuplicateMapOutputs: true) ~> select3",
+						"source3 select(mapColumn(",
+						"          registro_id,",
+						"          paciente_id,",
+						"          ci_paciente,",
+						"          nombre_paciente,",
+						"          apellido_paterno,",
+						"          apellido_materno,",
+						"          sexo,",
+						"          fecha_nacimiento,",
+						"          municipio_residencia,",
+						"          comunidad_indigena,",
+						"          fecha_vacunacion,",
+						"          vacuna_id,",
+						"          numero_dosis,",
+						"          establecimiento_id,",
+						"          lote_vacuna,",
+						"          temperatura_conservacion,",
+						"          edad_dias_aplicacion,",
+						"          aplicacion_oportuna,",
+						"          via_administracion",
+						"     ),",
+						"     skipDuplicateMapInputs: true,",
+						"     skipDuplicateMapOutputs: true) ~> select4",
+						"select4 derive(fuente_origen = 'Santa Cruz',",
+						"          documento_numero = split(ci_paciente, ' ')[1],",
+						"          documento_expedido = split(ci_paciente, ' ')[2],",
+						"          fecha_nacimiento = toDate(fecha_nacimiento, 'd/M/yyyy'),",
+						"          comunidad_indigena = toBoolean(comunidad_indigena),",
+						"          fecha_vacunacion = toDate(fecha_vacunacion, 'd/M/yyyy')) ~> derivedColumn12",
+						"derivedColumn12 derive(numero_dosis = toInteger(numero_dosis),",
+						"          temperatura_conservacion = toDecimal(temperatura_conservacion, 5, 2),",
+						"          edad_dias_aplicacion = toInteger(edad_dias_aplicacion),",
+						"          aplicacion_oportuna = toBoolean(aplicacion_oportuna),",
+						"          fecha_carga = currentTimestamp(),",
+						"          apellido_materno = iif(isNull(apellido_materno) || apellido_materno == '', toString(null()), trim(apellido_materno))) ~> derivedColumn13",
+						"derivedColumn13 select(mapColumn(",
+						"          registro_id,",
+						"          paciente_id,",
+						"          nombre_paciente,",
+						"          apellido_paterno,",
+						"          apellido_materno,",
+						"          sexo,",
+						"          fecha_nacimiento,",
+						"          municipio_residencia,",
+						"          comunidad_indigena,",
+						"          fecha_vacunacion,",
+						"          vacuna_id,",
+						"          numero_dosis,",
+						"          establecimiento_id,",
+						"          lote_vacuna,",
+						"          temperatura_conservacion,",
+						"          edad_dias_aplicacion,",
+						"          aplicacion_oportuna,",
+						"          via_administracion,",
+						"          fuente_origen,",
+						"          documento_numero,",
+						"          documento_expedido,",
+						"          fecha_carga",
+						"     ),",
+						"     skipDuplicateMapInputs: true,",
+						"     skipDuplicateMapOutputs: true) ~> select5",
+						"select2, select3 union(byName: true)~> union1",
+						"union1, select5 union(byName: true)~> union2",
+						"union2 sink(allowSchemaDrift: true,",
+						"     validateSchema: false,",
+						"     input(",
+						"          registro_id as string,",
+						"          fuente_origen as string,",
+						"          paciente_id as string,",
+						"          documento_numero as string,",
+						"          documento_expedido as string,",
+						"          nombre_paciente as string,",
+						"          apellido_paterno as string,",
+						"          apellido_materno as string,",
+						"          sexo as string,",
+						"          fecha_nacimiento as date,",
+						"          municipio_residencia as string,",
+						"          comunidad_indigena as boolean,",
+						"          fecha_vacunacion as date,",
+						"          vacuna_id as string,",
+						"          numero_dosis as integer,",
+						"          establecimiento_id as string,",
+						"          lote_vacuna as string,",
+						"          temperatura_conservacion as decimal(5,2),",
+						"          edad_dias_aplicacion as integer,",
+						"          aplicacion_oportuna as boolean,",
+						"          via_administracion as string,",
+						"          fecha_carga as timestamp",
+						"     ),",
+						"     deletable:false,",
+						"     insertable:true,",
+						"     updateable:false,",
+						"     upsertable:false,",
+						"     format: 'table',",
+						"     skipDuplicateMapInputs: true,",
+						"     skipDuplicateMapOutputs: true,",
+						"     errorHandlingOption: 'stopOnFirstError',",
+						"     mapColumn(",
+						"          registro_id,",
+						"          fuente_origen,",
+						"          paciente_id,",
+						"          documento_numero,",
+						"          documento_expedido,",
+						"          nombre_paciente,",
+						"          apellido_paterno,",
+						"          apellido_materno,",
+						"          sexo,",
+						"          fecha_nacimiento,",
+						"          municipio_residencia,",
+						"          comunidad_indigena,",
+						"          fecha_vacunacion,",
+						"          vacuna_id,",
+						"          numero_dosis,",
+						"          establecimiento_id,",
+						"          lote_vacuna,",
+						"          temperatura_conservacion,",
+						"          edad_dias_aplicacion,",
+						"          aplicacion_oportuna,",
+						"          via_administracion,",
+						"          fecha_carga",
+						"     )) ~> sink1"
+					]
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/vacunacion_la_paz_csv')]",
+				"[concat(variables('factoryId'), '/datasets/vacunacion_rural_movil_csv')]",
+				"[concat(variables('factoryId'), '/datasets/vacunacion_santa_cruz_csv')]",
+				"[concat(variables('factoryId'), '/datasets/silver_cat_vacunas')]",
+				"[concat(variables('factoryId'), '/datasets/silver_vacunacion_consolidada')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/df_bronze_departamentos')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Data flow1",
+						"type": "ExecuteDataFlow",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"dataflow": {
+								"referenceName": "df_cat_departamentos_bronze",
+								"type": "DataFlowReference",
+								"parameters": {},
+								"datasetParameters": {
+									"source1": {},
+									"sink1": {}
+								}
+							},
+							"staging": {},
+							"compute": {
+								"coreCount": 8,
+								"computeType": "General"
+							},
+							"traceLevel": "Fine"
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/dataflows/df_cat_departamentos_bronze')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/df_bronze_establecimientos')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Data flow1",
+						"type": "ExecuteDataFlow",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"dataflow": {
+								"referenceName": "df_cat_establecimientos_bronze",
+								"type": "DataFlowReference",
+								"parameters": {},
+								"datasetParameters": {
+									"source1": {},
+									"sink1": {}
+								}
+							},
+							"staging": {},
+							"compute": {
+								"coreCount": 8,
+								"computeType": "General"
+							},
+							"traceLevel": "Fine"
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/dataflows/df_cat_establecimientos_bronze')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/df_bronze_vacunas_consolidadas')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Data flow1",
+						"type": "ExecuteDataFlow",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"dataflow": {
+								"referenceName": "df_vacunacion_consolidada_bronze",
+								"type": "DataFlowReference",
+								"parameters": {},
+								"datasetParameters": {
+									"source1": {},
+									"source2": {},
+									"source3": {},
+									"source4": {},
+									"sink1": {}
+								}
+							},
+							"staging": {},
+							"compute": {
+								"coreCount": 8,
+								"computeType": "General"
+							},
+							"traceLevel": "Fine"
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/dataflows/df_vacunacion_consolidada_bronze')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/df_bronze_cat_vacunas')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Data flow1",
+						"type": "ExecuteDataFlow",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"dataflow": {
+								"referenceName": "df_cat_vacunas_bronze",
+								"type": "DataFlowReference",
+								"parameters": {},
+								"datasetParameters": {
+									"source1": {},
+									"sink1": {}
+								}
+							},
+							"staging": {},
+							"compute": {
+								"coreCount": 8,
+								"computeType": "General"
+							},
+							"traceLevel": "Fine"
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/dataflows/df_cat_vacunas_bronze')]"
+			]
+		}
+	]
+}
